@@ -1,4 +1,5 @@
 import React from 'react';
+import {HashRouter as Router,Switch, Route, Link} from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Layout from './layout/Layout';
 import SplashPage from './pages/SplashPage'
