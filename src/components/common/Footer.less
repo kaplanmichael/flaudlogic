@@ -1,0 +1,88 @@
+@import '../../less/colors';
+@import '../../less/mixins';
+
+footer {
+  margin: 100px auto 0px auto;
+  width: 1264px;
+  text-align: center;
+  padding-bottom: 40px;
+  nav {
+    background: transparent url('../../images/art_nav_bkgd.gif') no-repeat scroll left -4px;
+    height: 48px;
+    margin-bottom: 10px;
+    ul {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      li {
+        display: inline-block;
+        height: 27px;
+        margin-right: 20px;
+        margin-top: 8px;
+        position: relative;
+        vertical-align: top;
+        a {
+          .MIXCSSTransform(scale, 0.51, 1.0, 0, 0);
+          -webkit-text-stroke-width: 1.5px;
+          -webkit-text-stroke-color: @cl-page-hdr-stroke;
+          color: @cl-page-hdr-fill;
+          display: inline-block;
+          font-family: 'Amiri';
+          font-size: 30px;
+          font-weight: 700;
+          height: 27px;
+          letter-spacing: 7px;
+          line-height: 33px;
+          text-decoration: none;
+          text-transform: uppercase;
+          &.active {
+            color: @cl-nav-active-fill;
+          }
+
+        }
+        &.home {
+          width: 60px;
+        }
+        &.news {
+          width: 57px;
+        }
+        &.about {
+          width: 68px;
+        }
+        &.media {
+          width: 68px;
+        }
+        &.contact {
+          width: 133px;
+        }
+        &.press {
+          width: 63px;
+        }
+        &.links {
+          width: 60px;
+        }
+      }
+    }
+  }
+  .copyright {
+    text-align: center;
+    font: normal 9pt "Times New Roman", Times, serif;
+    color: @cl-gray;
+    text-transform: uppercase;
+    a:link {
+      font: normal 9pt "Times New Roman", Times, serif;
+      color: @cl-gray;
+      text-decoration: underline;
+    }
+    a:hover {
+      font: normal 9pt "Times New Roman", Times, serif;
+      color: @cl-gray;
+      text-decoration: none;
+    }
+    a:visited {
+      font: normal 9pt "Times New Roman", Times, serif;
+      color: @cl-gray;
+      text-decoration: underline;
+    }
+  }
+}

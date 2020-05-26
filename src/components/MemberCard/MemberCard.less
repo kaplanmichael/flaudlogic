@@ -1,0 +1,36 @@
+@import '../../less/colors';
+
+.member-card {
+    display: inline-block;
+    font-size: 15px;
+    height: 130px;
+    margin: 0px 20px 10px 0px;
+    vertical-align: top;
+    width: 198px;
+    strong {
+        display: block;
+        font-weight: normal;
+    }
+    em {
+        display: block;
+    }
+    img {
+        -webkit-filter: sepia(1);
+        border: none;
+        float: left;
+        clear: right;
+        display: block;
+        filter: sepia(1);
+        margin-right: 5px;
+    }
+    a:hover {
+        color: @cl-white;
+        border: none;
+        text-decoration: none;
+    }
+}
+div.bio_container a, div.bio_container a:link, div.bio_container a:visited {
+    color: @cl-white;
+    border: none;
+    text-decoration: none;
+}

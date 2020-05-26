@@ -1,0 +1,93 @@
+@import '../../less/core';
+@import '../../less/colors';
+@import '../../less/mixins';
+
+header {
+  nav {
+    height: 48px;
+    margin: 386px 0px 0px 0px;
+    padding: 0px 0px 0px 120px;
+    background: transparent url('../../images/art_nav_bkgd.gif') no-repeat scroll left top;
+    ul {
+      float: left;
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      li {
+        display: inline-block;
+        height: 27px;
+        margin-top: 12px;
+        padding-left: 28px;
+        position: relative;
+        vertical-align: top;
+        width: auto;
+        a {
+          -webkit-text-stroke-width: 1.5px;
+          -webkit-text-stroke-color: @cl-page-hdr-stroke;
+          color: @cl-page-hdr-fill;
+          font-family: 'Amiri';
+          font-size: 36px;
+          font-weight: 700;
+          letter-spacing: 17px;
+          line-height: 33px;
+          text-decoration: none;
+          text-transform: uppercase;
+          display: inline-block;
+          height: 27px;
+          margin-right: 14px;
+          span {
+            display: inline-block;
+            .MIXCSSTransform(scale, 0.51, 1.0, 0, 0);
+          }
+          &.home {
+            width: 79px;
+          }
+          &.news {
+            width: 78px;
+          }
+          &.about {
+            width: 96px;
+          }
+          &.media {
+            width: 95px;
+          }
+          &.contact {
+            width: 133px;
+          }
+          &.press {
+            width: 92px;
+          }
+          &.links {
+            width: 91px;
+          }
+          &.active {
+            color: @cl-nav-active-fill;
+          }
+        }
+        &.social {
+          margin-top: 0;
+          padding-left: 0;
+          img {
+            padding-left: 10px;
+            border: none;
+            margin: 10px 0 0 10px;
+          }
+          &:before {
+            display: none;
+          }
+        }
+        &:before {
+          background: transparent url('../../images/art_nav_sep.gif') no-repeat scroll left top;
+          content: "";
+          height: 16px;
+          left: 0px;
+          margin: 0px 14px 0px 0px;
+          position: absolute;
+          top: 5px;
+          width: 16px;
+        }
+      }
+    }
+
+  }
+}
