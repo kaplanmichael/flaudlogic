@@ -10,7 +10,7 @@ export default class ImageLink extends React.Component {
     }
 }
 
-ImageLink.PropTypes = {
+ImageLink.propTypes = {
   targetUrl: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
   altText: PropTypes.string

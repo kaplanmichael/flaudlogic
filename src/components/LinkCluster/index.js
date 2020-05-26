@@ -25,6 +25,6 @@ export default class LinkCluster extends React.Component {
 
 
 }
-LinkCluster.PropTypes = {
+LinkCluster.propTypes = {
     title: PropTypes.string.isRequired
 };

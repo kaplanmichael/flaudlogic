@@ -64,7 +64,7 @@ export default class ExpandText extends React.Component {
     }
 
 }
-ExpandText.PropTypes = {
+ExpandText.propTypes = {
     children: PropTypes.string.isRequired
 };
 
