@@ -1,7 +1,5 @@
 import React from 'react';
-import {HashRouter as Router,Switch, Route, Link} from 'react-router-dom';
-import Navigation from './components/Navigation';
-import Layout from './layout/Layout';
+import {HashRouter as Router,Switch, Route} from 'react-router-dom';
 import SplashPage from './pages/SplashPage'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'

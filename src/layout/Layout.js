@@ -6,7 +6,6 @@ import Analytics from '../components/common/Analytics';
 import CDBabyBuyNow from '../components/common/CDBabyBuyNow';
 import TwitterTimeline from '../components/common/TwitterTimeline';
 //import FacebookWidget from '../components/common/FacebookWidget';
-import PropTypes from 'prop-types';
 import { BlogViewer } from '../components/BlogViewer/BlogViewer'
 import './Layout.less';
 

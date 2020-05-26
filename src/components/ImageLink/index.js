@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {HashRouter, Switch, Route, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 export default class ImageLink extends React.Component {
     render() {

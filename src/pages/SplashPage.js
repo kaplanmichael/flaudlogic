@@ -1,5 +1,4 @@
 import React from 'react';
-import ImageLink from '../components/ImageLink/';
 import {Link} from 'react-router-dom';
 import SplashLayout from '../layout/SplashLayout';
 
@@ -13,7 +12,7 @@ export default class SplashPage extends React.Component {
 						<Link to="/home">
 							<area alt="" coords="77,65,624,413"/>
 						</Link>
-						<Link to="/home">						
+						<Link to="/home">
 							<area alt="" coords="162,413,530,485" />
 						</Link>
 						<area coords="376,553,424,577" href="http://www.youtube.com/user/FlaudLogic" target="_blank" alt="YouTube Channel" title="YouTube Channel" rel="noopener noreferrer"/>
