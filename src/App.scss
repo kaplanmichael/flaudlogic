@@ -1,0 +1,83 @@
+@import './scss/colors';
+@import './scss/fonts';
+@import './scss/mixins';
+
+
+@import './pages/MediaPage.scss';
+
+* {
+	box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    margin: 0px 0px 1px;
+    padding: 0px;
+}
+body {
+    @include fontRender($cl-white, 400, 'Open Sans', 15px, 20px, normal);
+    background-color: #000;
+    background-image: url('./images/art_bkgd.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: $cl-white;
+    margin: 0px 0px 0px 0px;
+}
+
+a {
+    color: $cl-half-baked;
+    text-decoration:none;
+	&:hover {
+		text-decoration:underline;
+	}
+}
+
+
+h1 {
+    @include MIXCSSTransform(scale, 0.6, 1.0, 0, 0);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $cl-page-hdr-stroke;
+    color: $cl-page-hdr-fill;
+    display: inline-block;
+    font-family: 'Amiri';
+    font-size: 72px;
+    font-weight: 700;
+    letter-spacing: 26px;
+    line-height: 72px;
+    margin: 0px;
+    text-transform: uppercase;
+    &:before {
+        background: url('./images/art_hdr_medallion.png');
+        content:"";
+        display: inline-block;
+        height: 44px;
+        margin-right: 30px;
+        transform: scale(1.5,1);
+        width: 43px;
+    }
+}
+h2 {
+    color: #c3c4d1;
+    font: normal 26pt "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    margin: 0px;
+    padding-bottom: 0px;
+}
+input[type="text"], textarea {
+    background-color: $cl-nepal;
+    border: 1px solid $cl-tropical-blue;
+    font: normal 13pt "Times New Roman", Times, serif;
+}
+
+
+aside {
+	color: blue;
+	display: inline;
+}
+
+.hideMe {
+	display: none;
+}
+.showMe {
+	display: inline;
+}

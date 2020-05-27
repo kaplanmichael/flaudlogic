@@ -1,0 +1,37 @@
+/**
+ * $Filename: mixins.scss
+ * $Author: Michael Kaplan
+ */
+
+/* Sample Usage:    @include fontRender(#5a5b5d; normal; ~'HelveticaNeueLT75Bold'; 0.6875rem; 1.1rem; 0.075rem);    */
+@mixin fontRender($color, $weight: 400, $nameString: null, $size: 1rem, $lineHeight: 1.0rem, $letterSpacing: normal){
+    color: $color;
+    font-weight: $weight;
+    font-family: $nameString;
+    font-size: $size;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+}
+
+@mixin MIXCSSTransform($prop: scale, $x: 1, $y: 1, $originX: 0, $originY: 0){
+  -webkit-transform: '#{$prop}(#{$x}, #{$y})';
+  -moz-transform: '#{$prop}(#{$x}, #{$y})';
+  -o-transform: '#{$prop}(#{$x}, #{$y})';
+  -ms-transform: '#{$prop}(#{$x}, #{$y})';
+  transform: '#{$prop}(#{$x}, #{$y})';
+  transform-origin: $originX $originY;
+}
+
+// Micro ClearFix Mixin
+@mixin cf(){
+  zoom: 1;
+
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../layout/Layout';
 import DynamicImageGrid from '../components/DynamicImageGrid';
-import './MediaPage.less';
+//import './MediaPage.scss';
 
 const releaseparty = {};
 const traxeast = {};

@@ -8,6 +8,7 @@ import MediaPage from './pages/MediaPage'
 import PressPage from './pages/PressPage'
 import LinksPage from './pages/LinksPage'
 import ContactPage from './pages/ContactPage'
+import './App.scss';
 
 export default class App extends React.Component {
     constructor(props) {
