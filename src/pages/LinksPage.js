@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../layout/Layout';
 import LinkCluster from '../components/LinkCluster';
-import './LinksPage.less';
 
 export default class LinksPage extends React.Component {
     render() {

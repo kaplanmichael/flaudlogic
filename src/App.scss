@@ -16,6 +16,7 @@
 
 //pages
 @import './pages/MediaPage';
+@import './pages/LinksPage';
 
 * {
 	box-sizing: border-box;
@@ -43,7 +44,6 @@ a {
 		text-decoration:underline;
 	}
 }
-
 
 h1 {
     @include MIXCSSTransform(scale, 0.6, 1.0, 0, 0);
