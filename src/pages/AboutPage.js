@@ -133,9 +133,9 @@ export default class AboutPage extends React.Component {
                 <h1>About</h1>
                 <ExpandText>
                     <section>
-                        <p className="quote"> "...really grabbing &#151; like a black hole that just sucked me in from
+                        <p className="quote"> "...really grabbing — like a black hole that just sucked me in from
                             the get-go."</p>
-                        <p className="byline">&#151; Chris Rich, Composer, Theater of the Mind Rock Opera</p>
+                        <p className="byline">— Chris Rich, Composer, Theater of the Mind Rock Opera</p>
                         <p>Flaud Logic originated in Brooklyn, New York in 2008. Originally an attempt to demo some song
                             ideas composer Michael Kaplan had written over the years, it gradually evolved into a
                             full-length album featuring performances from a cadre of talented musicians including
@@ -143,11 +143,11 @@ export default class AboutPage extends React.Component {
                             (Rhodes).</p>
                         <aside>
                             <p>Over a period of months, Michael composed and arranged these musical ideas into what
-                                would become the album's core: Four tracks&#151;one, a 23-minute epic&#151;that take the
+                                would become the album's core: Four tracks—one, a 23-minute epic—that take the
                                 listener through a variety of soundscapes and stories.</p>
                             <p>The Flaud Logic sound can best be described as progressive rock, a genre true to
                                 Michael's love of sonic experimentation. The album spans a range of styles and
-                                moods&#151;from elation to sorrow&#151;painted by careful instrumentation and vivid
+                                moods—from elation to sorrow—painted by careful instrumentation and vivid
                                 lyrics. Moments of bone-crushing metal, the clockwork intricacy of mathcore, and retro
                                 Beatles-era rock, meet soaring and uplifting passages and catchy hooks.</p>
                         </aside>

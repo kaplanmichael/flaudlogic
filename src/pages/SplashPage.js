@@ -7,7 +7,7 @@ export default class SplashPage extends React.Component {
         return (
             <SplashLayout>
 				<section className="splash-container">
-					<img src={ require('../images/art_fl_splash.jpg') } width={700} height={632} useMap="#splash" />
+					<img src={ require('../images/art_fl_splash.jpg') } width={700} height={632} useMap="#splash" alt="Flaud Logic | The Official Webscape" />
 					<map name="splash" id="splash">
 						<Link to="/home">
 							<area alt="" coords="77,65,624,413"/>

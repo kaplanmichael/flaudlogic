@@ -64,9 +64,11 @@ export default class ExpandText extends React.Component {
     }
 
 }
+/*
 ExpandText.propTypes = {
     children: PropTypes.string.isRequired
 };
+*/
 
 ExpandText.defaultProps = {
     moreTextLabel: 'View More...',

@@ -11,7 +11,7 @@ export default class CDBabyBuyNow extends React.Component {
 		}
 		return (
             <div>
-				<a href="http://store.cdbaby.com/cd/flaudlogic" target="cdbaby" style={badgeStyle} title="Flaud Logic: Flaud Logic" alt="Flaud Logic: Flaud Logic" ></a>
+				<a href="http://store.cdbaby.com/cd/flaudlogic" target="cdbaby" style={badgeStyle} title="Flaud Logic: Flaud Logic" alt="Flaud Logic: Flaud Logic" >&nbsp;</a>
             </div>
         );
     }
