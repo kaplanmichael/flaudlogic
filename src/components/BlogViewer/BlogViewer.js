@@ -9,12 +9,25 @@ class BlogViewer extends React.Component {
         };
     }
 
+    grabDate(utc) {
+      let date = new Date(utc);
+      return (`${date.getMonth()+1}.${date.getDate()}.${date.getFullYear()}`);
+    }
+
+    grabTime(utc) {
+      let date = new Date(utc);
+      let hours = date.getHours();
+      let ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = (hours % 12) || 12;
+      return (`${hours}:${date.getMinutes().toString().padStart(2, '0')} ${ampm}`);
+    }
+
     render() {
         let blogEntries;
         if (Object.keys(this.props.data).length !== 0) {
             blogEntries = this.props.data.items.map(item => (
                 <article key={item.id}>
-                    <time>{item.published} // <em>posted by {item.author.displayName} @ time</em></time>
+                    <time><em>{`${this.grabDate(item.published)} // posted by ${item.author.displayName} @ ${this.grabTime(item.published)}`}</em></time>
                     <h2>{item.title}</h2>
                     <div dangerouslySetInnerHTML={this.createMarkup(item.content)}></div>
                     [sharing widget]
