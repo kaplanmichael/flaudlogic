@@ -23,7 +23,7 @@ export default class DynamicImageGrid extends React.Component {
                 {Object.keys(data).map((key, index) => {
                     this.images.push(data[key]);
                     return (
-                           <img key={index} onClick={() => this.setState({isOpen:true, photoIndex: index})} src={data[key]} width="75" height="75"/>
+                           <img key={index} onClick={() => this.setState({isOpen:true, photoIndex: index})} src={data[key]} width="75" height="75" alt=""/>
                     )
 
                 })}

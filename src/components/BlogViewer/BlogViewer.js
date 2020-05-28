@@ -1,5 +1,4 @@
 import React from 'react';
-import './BlogViewer.less';
 
 class BlogViewer extends React.Component {
 

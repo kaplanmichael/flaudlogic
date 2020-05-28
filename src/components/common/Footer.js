@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link, NavLink} from 'react-router-dom';
-import './Footer.less';
+
 export default class Footer extends React.Component {
     render() {
         return (
@@ -18,7 +18,7 @@ export default class Footer extends React.Component {
               <span className="copyright">
                 Reproduction of material from any flaudlogic.com page without written permission from the author is strictly prohibited.<br />
                 ©2018 Copyright Michael D. Kaplan. All rights reserved.  Website layout by Gustavo Sazes for <a
-                  href="http://www.abstrata.net" target="_blank">abstrata.net</a>. <br />
+                  href="http://www.abstrata.net" target="_blank" rel="noopener noreferrer">abstrata.net</a>. <br />
                   <Link to="/contact">Contact</Link>
               </span>
             </footer>

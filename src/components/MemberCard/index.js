@@ -1,5 +1,4 @@
 import React from 'react';
-import './MemberCard.less';
 
 export default class MemberCard extends React.Component {
     render() {

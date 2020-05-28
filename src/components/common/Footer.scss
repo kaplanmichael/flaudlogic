@@ -1,5 +1,5 @@
-@import '../../less/colors';
-@import '../../less/mixins';
+//@import '../../less/colors';
+//@import '../../less/mixins';
 
 footer {
   margin: 100px auto 0px auto;
@@ -22,10 +22,10 @@ footer {
         position: relative;
         vertical-align: top;
         a {
-          .MIXCSSTransform(scale, 0.51, 1.0, 0, 0);
+          @include MIXCSSTransform(scale, 0.51, 1.0, 0, 0);
           -webkit-text-stroke-width: 1.5px;
-          -webkit-text-stroke-color: @cl-page-hdr-stroke;
-          color: @cl-page-hdr-fill;
+          -webkit-text-stroke-color: $cl-page-hdr-stroke;
+          color: $cl-page-hdr-fill;
           display: inline-block;
           font-family: 'Amiri';
           font-size: 30px;
@@ -36,7 +36,7 @@ footer {
           text-decoration: none;
           text-transform: uppercase;
           &.active {
-            color: @cl-nav-active-fill;
+            color: $cl-nav-active-fill;
           }
 
         }
@@ -67,21 +67,21 @@ footer {
   .copyright {
     text-align: center;
     font: normal 9pt "Times New Roman", Times, serif;
-    color: @cl-gray;
+    color: $cl-gray;
     text-transform: uppercase;
     a:link {
       font: normal 9pt "Times New Roman", Times, serif;
-      color: @cl-gray;
+      color: $cl-gray;
       text-decoration: underline;
     }
     a:hover {
       font: normal 9pt "Times New Roman", Times, serif;
-      color: @cl-gray;
+      color: $cl-gray;
       text-decoration: none;
     }
     a:visited {
       font: normal 9pt "Times New Roman", Times, serif;
-      color: @cl-gray;
+      color: $cl-gray;
       text-decoration: underline;
     }
   }

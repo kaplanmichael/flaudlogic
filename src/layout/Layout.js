@@ -7,7 +7,6 @@ import CDBabyBuyNow from '../components/common/CDBabyBuyNow';
 import TwitterTimeline from '../components/common/TwitterTimeline';
 //import FacebookWidget from '../components/common/FacebookWidget';
 import { BlogViewer } from '../components/BlogViewer/BlogViewer'
-import './Layout.less';
 
 export default class Layout extends React.Component {
 

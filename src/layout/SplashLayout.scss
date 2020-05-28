@@ -1,6 +1,6 @@
-@import '../less/colors';
+//@import '../less/colors';
 .splash-container {
-	background-color: @cl-black;
+	background-color: $cl-black;
 	min-height: 2400px;
 	left: 0;
 	position: absolute;

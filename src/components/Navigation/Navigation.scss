@@ -1,6 +1,6 @@
-@import '../../less/core';
-@import '../../less/colors';
-@import '../../less/mixins';
+//@import '../../less/core';
+//@import '../../less/colors';
+//@import '../../less/mixins';
 
 header {
   nav {
@@ -23,8 +23,8 @@ header {
         width: auto;
         a {
           -webkit-text-stroke-width: 1.5px;
-          -webkit-text-stroke-color: @cl-page-hdr-stroke;
-          color: @cl-page-hdr-fill;
+          -webkit-text-stroke-color: $cl-page-hdr-stroke;
+          color: $cl-page-hdr-fill;
           font-family: 'Amiri';
           font-size: 36px;
           font-weight: 700;
@@ -37,7 +37,7 @@ header {
           margin-right: 14px;
           span {
             display: inline-block;
-            .MIXCSSTransform(scale, 0.51, 1.0, 0, 0);
+            @include MIXCSSTransform(scale, 0.51, 1.0, 0, 0);
           }
           &.home {
             width: 79px;
@@ -61,7 +61,7 @@ header {
             width: 91px;
           }
           &.active {
-            color: @cl-nav-active-fill;
+            color: $cl-nav-active-fill;
           }
         }
         &.social {
