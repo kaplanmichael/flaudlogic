@@ -59,8 +59,6 @@ class BlogViewer extends React.Component {
                     }>Prev</button>
                 }
 
-                <br />
-
                 {this.props.data.items && this.props.data.items.length === 10 && (
                     <button onClick={() => {
                         this.state.pagePos++;
@@ -82,8 +80,6 @@ class BlogViewer extends React.Component {
                     }
                     }>Prev</button>
                 }
-
-                <br />
 
                 {this.props.data.items && this.props.data.items.length === 10 && (
                     <button onClick={() => {

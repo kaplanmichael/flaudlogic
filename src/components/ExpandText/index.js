@@ -71,6 +71,6 @@ ExpandText.propTypes = {
 */
 
 ExpandText.defaultProps = {
-    moreTextLabel: 'View More...',
-    lessTextLabel: 'View Less...'
+    moreTextLabel: 'More...',
+    lessTextLabel: 'Less...'
 };

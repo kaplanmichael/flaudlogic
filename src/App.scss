@@ -81,6 +81,16 @@ input[type="text"], textarea {
     font: normal 13pt "Times New Roman", Times, serif;
 }
 
+button {
+	@include fontRender(#000000, 700, 'Amiri', 15px, 20px, normal);
+	background-color: #666666;
+	border: 0;
+	display: inline-block;
+	filter: sepia(1);
+	margin: 0 5px 10px 0px;
+	padding: 5px 10px 3px 10px;
+	text-transform: uppercase;
+}
 
 aside {
 	color: blue;
