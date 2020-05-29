@@ -56,7 +56,7 @@ const MEMBERS = [
     {
         "name": "Kurt Goedel",
         "role": "Guitars",
-        "bio": "<p>After faking his death in 1978, Kurt Goedel took up guitar.  He quit in 1981 (damn barre chords!) Two years later, Goedel felt incomplete, even with a daily diet of sci-fi-inspired prog-metal.  So, one day, after playing Dungeons &amp; Dragons alone (don't ask), Goedel was drawn to the closet wherein was his guitar.  Reportedly, he hadn't been so excited since the publication of <em>&Uuml;ber formal unentscheidbare S&auml;tze der \"Principia Mathematica\" und verwandter Systeme</em>, some fifty years before!</p><p>Goedel became a metalhead, pop aficianado, wannabe jazzbo, and opportunistic folkster.  He studied with jazz guitarist Francis Varrichio.  These ingredients first mixed in The Evelyn Situation, where Goedel worked with Andrew Durkin, now ringleader of <a href=\"http://industrialjazzgroup.com/\" target=\"_blank\">The Industrial Jazz Group</a>.</p><p>In 2000, he completed his first CD, <em>Itch</em>.  Co-produced with Zak Rizvi (4Front), the album explored territory between naturalistic and technological, with songs about instinct, Evil, and seasonal allergies.  In 2003, Goedel finished The <em>Luna Stereo Theater</em>.  This \"immersive headphone experience\" has also been described as \"sound art\" and \"a tribute to Frank Zappa.\"</p><p>A guitar teacher since high school, Goedel is currently writing several guitar books.  For more on Goedel, see <a href=\"http://monkeyshrines.blogspot.com/\" target=\"_blank\">this blog</a>.</p>",
+        "bio": "<p>After faking his death in 1978, Kurt Goedel took up guitar.  He quit in 1981 (damn barre chords!) Two years later, Goedel felt incomplete, even with a daily diet of sci-fi-inspired prog-metal.  So, one day, after playing Dungeons &amp; Dragons alone (don't ask), Goedel was drawn to the closet wherein was his guitar.  Reportedly, he hadn't been so excited since the publication of <em>&Uuml;ber formal unentscheidbare S&auml;tze der \"Principia Mathematica\" und verwandter Systeme</em>, some fifty years before!</p><p>Goedel became a metalhead, pop aficianado, wannabe jazzbo, and opportunistic folkster.  He studied with jazz guitarist Francis Varrichio.  These ingredients first mixed in The Evelyn Situation, where Goedel worked with Andrew Durkin, now ringleader of <a href=\"http://industrialjazzgroup.com/\" target=\"_blank\">The Industrial Jazz Group</a>.</p><p>In 2000, he completed his first CD, <em>Itch</em>.  Co-produced with Zak Rizvi (4Front), the album explored territory between naturalistic and technological, with songs about instinct, Evil, and seasonal allergies.  In 2003, Goedel finished The <em>Luna Stereo Theater</em>.  This \"immersive headphone experience\" has also been described as \"sound art\" and \"a tribute to Frank Zappa.\"</p><p>A guitar teacher since high school, Goedel is currently writing several guitar books.</p>",
         "thumburl": require(`../images/fl_cast_kgoedel.jpg`),
         "imageurl": require(`../images/fl_cast_kgoedel.jpg`)
     },
@@ -154,7 +154,7 @@ export default class AboutPage extends React.Component {
                     </section>
                 </ExpandText>
                 {MEMBERS.map((item, i) =>
-                    <MemberCard imageurl={item.thumburl} name={item.name} role={item.role} key={i}/>
+                    <MemberCard member={item}/>
                 )}
             </Layout>
         )
