@@ -2,8 +2,17 @@ import React from 'react';
 import BioModal from '../BioModal';
 
 export default class MemberCard extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible: false
+        };
+    }
+
     openModal() {
-      alert("hello");
+      this.setState({
+        visible: !this.state.visible
+      });
     }
     render() {
         return (
@@ -13,7 +22,7 @@ export default class MemberCard extends React.Component {
                 <strong>{this.props.member.name}</strong>
                 <em>{this.props.member.role}</em>
             </section>
-            <BioModal obj={this.props.member} visible={false}/>
+            <BioModal obj={this.props.member} visible={this.state.visible}/>
           </>
         );
     }

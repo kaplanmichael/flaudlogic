@@ -2,7 +2,10 @@
   background-color: #000;
   border: 10px solid rgba($cl-white,0.5);
   border-radius: 5px;
+  left: 50%;
   position: absolute;
+  transform: translateX(-50%);
+  top: 50%;
   width: 30%;
   z-index: 1;
   &.hidden {

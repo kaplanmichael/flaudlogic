@@ -12,7 +12,7 @@ export default class BioModal extends React.Component {
                   <em>{this.props.obj.role}</em>
                 </figcaption>
               </figure>
-              {this.props.obj.bio}
+              <div dangerouslySetInnerHTML={ { __html: this.props.obj.bio } } />
             </article>
         );
     }
