@@ -11,9 +11,16 @@ export default class MemberCard extends React.Component {
 
     openModal() {
       this.setState({
-        visible: !this.state.visible
+        visible: true
       });
     }
+
+    closeModal() {
+      this.setState({
+        visible: false
+      });
+    }
+
     render() {
         return (
           <>
@@ -21,8 +28,8 @@ export default class MemberCard extends React.Component {
                 <img src={this.props.member.thumburl} onClick={() => this.openModal()} alt=""/>
                 <strong>{this.props.member.name}</strong>
                 <em>{this.props.member.role}</em>
+                <BioModal obj={this.props.member} visible={this.state.visible} clickAction={() => this.closeModal()}/>
             </section>
-            <BioModal obj={this.props.member} visible={this.state.visible}/>
           </>
         );
     }
