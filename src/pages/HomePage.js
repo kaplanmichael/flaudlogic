@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../layout/Layout';
-import { BlogViewer } from '../components/BlogViewer/BlogViewer'
+import { BlogViewerX } from '../components/BlogViewer/BlogViewer'
 
 export default class HomePage extends React.Component {
     render() {
@@ -13,7 +13,7 @@ export default class HomePage extends React.Component {
                 pageTokens={this.props.pageTokens}
             >
                 <h1>Home</h1>
-                <BlogViewer />
+                <BlogViewerX />
             </Layout>
         )
     }

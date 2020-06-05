@@ -1,11 +1,98 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+function BlogViewerX(props) {
+  const [data, setData] = useState([]);
+  const [pagePos, setPagePos] = useState(0);
+  const [pageTokens, setpageTokens] = useState(['']);
+
+  useEffect(() => {
+        fetch("https://www.googleapis.com/blogger/v3/blogs/2726861849607401146/posts?key=AIzaSyCgg1t9I1o3nz8OG1En1Bbqt8I-vF18LvU")
+        .then(res => res.json())
+        .then(
+            result => {
+              console.log("result", (result));
+              setData(result)
+              //add new nextPage Token to the array of tokens
+              if(!pageTokens.includes(result.nextPageToken)) {
+                  console.log('fetch: here is the loaded token ' + result.nextPageToken);
+                  setpageTokens(pageTokens => [...pageTokens, result.nextPageToken]);
+                  console.log('fetch: here it is pushed into the array ' + pageTokens);
+              }
+            }
+        )
+    }, [])
+    const createMarkup = (content) => {
+        return {__html: content}
+    }
+    const grabDate = (utc) => {
+      let date = new Date(utc);
+      return (`${date.getMonth()+1}.${date.getDate()}.${date.getFullYear()}`);
+    }
+
+    const grabTime = (utc) => {
+      let date = new Date(utc);
+      let hours = date.getHours();
+      let ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = (hours % 12) || 12;
+      return (`${hours}:${date.getMinutes().toString().padStart(2, '0')} ${ampm}`);
+    }
+
+  return (
+    <section className="blog-viewer">
+    {pageTokens[pagePos - 1] &&
+            <button onClick={() => {
+              setPagePos(pagePos - 1);
+              console.log('prev: heres where we are going', pageTokens[pagePos]);
+              props.fetch(pageTokens[pagePos]);
+            }
+        }>Prev</button>
+    }
+    {data.items && data.items.length === 10 && (
+        <button onClick={(props) => {
+            setPagePos(pagePos + 1);
+            console.log('next: heres where we are going',pageTokens, pagePos, props);
+            props.fetch(pageTokens[pagePos]);
+        }
+        }>Next</button>
+    )}
+      {data.items &&
+        data.items.map(item => (
+          <article key={item.id}>
+              <time><em>{`${grabDate(item.published)} // posted by ${item.author.displayName} @ ${grabTime(item.published)}`}</em></time>
+              <h2>{item.title}</h2>
+              <div dangerouslySetInnerHTML={createMarkup(item.content)}></div>
+              [sharing widget]
+          </article>
+        ))
+      }
+    </section>
+  )
+}
+
+export { BlogViewerX };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class BlogViewer extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            pagePos: 0
+            pagePos: 1
         };
     }
 
@@ -50,9 +137,13 @@ class BlogViewer extends React.Component {
                 <br />token at pos {this.state.pagePos+1} {typeof this.props.pageTokens[this.state.pagePos+1]}<br />
                 */}
 
-                {this.props.pageTokens[this.state.pagePos] &&
+                {this.props.pageTokens[this.state.pagePos - 1] &&
                         <button onClick={() => {
-                        this.state.pagePos--;
+                          this.setState( state => {
+                            return {
+                              pagePos: state.pagePos--
+                            }
+                          })
                         console.log('prev: heres where we are going', this.props.pageTokens[this.state.pagePos]);
                         this.props.fetch(this.props.pageTokens[this.state.pagePos]);
                     }
@@ -61,7 +152,11 @@ class BlogViewer extends React.Component {
 
                 {this.props.data.items && this.props.data.items.length === 10 && (
                     <button onClick={() => {
-                        this.state.pagePos++;
+                        this.setState( state => {
+                          return {
+                            pagePos: state.pagePos++
+                          }
+                        })
                         console.log('next: heres where we are going',this.props.pageTokens[this.state.pagePos]);
                         this.props.fetch(this.props.pageTokens[this.state.pagePos]);
                     }

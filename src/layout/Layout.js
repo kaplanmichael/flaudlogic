@@ -15,11 +15,7 @@ export default class Layout extends React.Component {
         const content = React.Children.map( this.props.children, (child) => {
             if (child.type === BlogViewer) {
                 return React.cloneElement(child, {
-                    error: this.props.error,
-                    isLoaded: this.props.isLoaded,
-                    data: this.props.data,
                     fetch: this.props.fetch,
-                    pageTokens: this.props.pageTokens
                 })
 
             } else {
