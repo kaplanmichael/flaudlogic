@@ -6,22 +6,10 @@ import Analytics from '../components/common/Analytics';
 import CDBabyBuyNow from '../components/common/CDBabyBuyNow';
 import TwitterTimeline from '../components/common/TwitterTimeline';
 //import FacebookWidget from '../components/common/FacebookWidget';
-import { BlogViewer } from '../components/BlogViewer/BlogViewer'
 
 export default class Layout extends React.Component {
 
     render() {
-
-        const content = React.Children.map( this.props.children, (child) => {
-            if (child.type === BlogViewer) {
-                return React.cloneElement(child, {
-                    fetch: this.props.fetch,
-                })
-
-            } else {
-                return child
-            }
-        });
         return (
             <div id="content-container">
                 <Header>
@@ -29,7 +17,7 @@ export default class Layout extends React.Component {
                     <Navigation />
                 </Header>
                 <div className="column left">
-                    {content}
+                    {this.props.children}
                 </div>
                 {this.props.hasSidebar ? <div className="column right"><CDBabyBuyNow /><TwitterTimeline /></div> : ''}
                 <div style={{clear: 'both'}}/>
