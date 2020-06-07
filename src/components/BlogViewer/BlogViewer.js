@@ -59,7 +59,7 @@ const BlogViewerX = () => {
 
   return (
     <section className="blog-viewer">
-    {pageTokens[pagePos - 1] &&
+    {(pageTokens[pagePos - 1] || pageTokens[pagePos - 1] === "") &&
             <button onClick={() => {
               setPagePos(pagePos - 1);
               console.log('prev: heres where we are going', pageTokens[pagePos]);
