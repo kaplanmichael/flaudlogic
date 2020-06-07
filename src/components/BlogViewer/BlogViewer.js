@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { BlogNav } from './BlogNav';
+
 const BlogViewerX = () => {
   const [data, setData] = useState([]);
   const [pagePos, setPagePos] = useState(0);
@@ -59,33 +61,18 @@ const BlogViewerX = () => {
 
   return (
     <section className="blog-viewer">
-    {(pageTokens[pagePos - 1] || pageTokens[pagePos - 1] === "") &&
-            <button onClick={() => {
-              setPagePos(pagePos - 1);
-              console.log('prev: heres where we are going', pageTokens[pagePos]);
-              //fetchBlogData(pageTokens[pagePos]);
-            }
-        }>Prev</button>
-    }
-    {data.items && data.items.length === 10 && (
-        <button onClick={() => {
-            setPagePos(pagePos + 1);
-            console.log('next: heres where we are going',pageTokens[pagePos]);
-            //fetchBlogData(pageTokens[pagePos]);
-
-        }
-        }>Next</button>
-    )}
+      <BlogNav {...{pageTokens, pagePos, setPagePos, data}} />
       {data.items &&
         data.items.map(item => (
           <article key={item.id}>
               <time><em>{`${grabDate(item.published)} // posted by ${item.author.displayName} @ ${grabTime(item.published)}`}</em></time>
-              <h2>{item.title}</h2>
+              <h2 dangerouslySetInnerHTML={createMarkup(item.title)}></h2>
               <div dangerouslySetInnerHTML={createMarkup(item.content)}></div>
               [sharing widget]
           </article>
         ))
       }
+      <BlogNav {...{pageTokens, pagePos, setPagePos, data}} />
     </section>
   )
 }

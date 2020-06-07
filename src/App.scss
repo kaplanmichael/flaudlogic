@@ -6,6 +6,7 @@
 
 //components
 @import './components/BlogViewer/BlogViewer';
+@import './components/BlogViewer/BlogNav';
 @import './components/common/Footer';
 @import './components/MemberCard/MemberCard';
 @import './components/Navigation/Navigation';
@@ -86,11 +87,16 @@ button {
 	@include fontRender(#000000, 700, 'Amiri', 15px, 20px, normal);
 	background-color: #666666;
 	border: 0;
+	cursor: pointer;
 	display: inline-block;
 	filter: sepia(1);
 	margin: 0 5px 10px 0px;
 	padding: 5px 10px 3px 10px;
 	text-transform: uppercase;
+	&:disabled {
+		background-color: #333333;
+		cursor: text;
+	}
 }
 
 aside {
