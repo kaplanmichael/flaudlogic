@@ -8,14 +8,12 @@ const showNextButton = data.items && data.items.length === 10;
           <button disabled={!showPrevButton} onClick={
             () => {
               setPagePos(pagePos - 1);
-              console.log('prev: heres where we are going', pageTokens[pagePos]);
             }
           }>Prev</button>
 
           <button disabled={!showNextButton} onClick={
             () => {
               setPagePos(pagePos + 1);
-              console.log('next: heres where we are going',pageTokens[pagePos]);
             }
           }>Next</button>
 

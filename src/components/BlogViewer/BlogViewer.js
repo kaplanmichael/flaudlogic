@@ -29,6 +29,12 @@ const BlogViewerX = () => {
         let newUrl = apiUrl;
         newUrl += '&pageToken=' + pageToken;
         setApiUrl(newUrl);
+    } else {
+      let url = new URL(apiUrl);
+      let params = new URLSearchParams(url.search);
+      params.delete('pageToken');
+      url.search = params.toString();
+      setApiUrl(url);
     }
   }
 
@@ -52,7 +58,7 @@ const BlogViewerX = () => {
   //useEffect(fetchBlogData, [])
   useEffect(() => console.log('fetch: here it is pushed into the array ' + pageTokens), [pageTokens])
   useEffect(() => {
-    console.log('page pos was updated');
+    console.log('heres where we are going', pageTokens[pagePos]);
     updateApiUrl(pageTokens[pagePos]);
   }, [pagePos])
   useEffect(() => {
