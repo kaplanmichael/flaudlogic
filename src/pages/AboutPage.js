@@ -129,7 +129,7 @@ export default class AboutPage extends React.Component {
 
     render() {
         return (
-            <Layout>
+            <Layout pageClass="about-page">
                 <h1>About</h1>
                 <ExpandText>
                     <section>
@@ -141,7 +141,7 @@ export default class AboutPage extends React.Component {
                             full-length album featuring performances from a cadre of talented musicians including
                             Michael Romeo (guitar), Frank Wyatt (saxophone), Joe Bergamini (drums), and Benny Lackner
                             (Rhodes).</p>
-                        <aside>
+                        <span>
                             <p>Over a period of months, Michael composed and arranged these musical ideas into what
                                 would become the album's core: Four tracks—one, a 23-minute epic—that take the
                                 listener through a variety of soundscapes and stories.</p>
@@ -150,11 +150,13 @@ export default class AboutPage extends React.Component {
                                 moods—from elation to sorrow—painted by careful instrumentation and vivid
                                 lyrics. Moments of bone-crushing metal, the clockwork intricacy of mathcore, and retro
                                 Beatles-era rock, meet soaring and uplifting passages and catchy hooks.</p>
-                        </aside>
+                        </span>
                     </section>
                 </ExpandText>
+                <h2>Cast</h2>
+                <p>Click for bios.</p>
                 {MEMBERS.map((item, i) =>
-                    <MemberCard member={item}/>
+                    <MemberCard member={item} key={i}/>
                 )}
             </Layout>
         )

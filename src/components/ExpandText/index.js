@@ -14,7 +14,7 @@ export default class ExpandText extends React.Component {
 
     render() {
         const content = this.recursiveMap(this.props.children, child => {
-            if (child.type === 'aside') {
+            if (child.type === 'span') {
                 return React.cloneElement(child, {
                     className: this.state.isVisible ? 'showMe' : 'hideMe'
                 })
