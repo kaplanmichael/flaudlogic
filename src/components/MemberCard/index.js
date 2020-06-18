@@ -26,7 +26,7 @@ export default class MemberCard extends React.Component {
           <>
             <figure className="member-card">
               <div onClick={() => this.openModal()}>
-                <img src={this.props.member.thumburl}/>
+                <img src={this.props.member.thumburl} alt={`${this.props.member.name}`}/>
                 <figcaption>
                   <strong>{this.props.member.name}</strong>
                   <em>{this.props.member.role}</em>
