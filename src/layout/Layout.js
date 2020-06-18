@@ -11,7 +11,7 @@ export default class Layout extends React.Component {
 
     render() {
         return (
-            <div id="content-container">
+            <div id="content-container" className={this.props.pageClass}>
                 <Header>
                     <Analytics />
                     <Navigation />
