@@ -18,6 +18,7 @@
 
 //pages
 @import './pages/MediaPage';
+@import './pages/AboutPage';
 @import './pages/LinksPage';
 
 * {
@@ -30,13 +31,17 @@ html, body {
 }
 body {
     @include fontRender($cl-white, 400, 'Open Sans', 15px, 20px, normal);
-    background-color: #000;
+    background-color: $cl-black;
     background-image: url('./images/art_bkgd.jpg');
     background-position: center top;
     background-repeat: no-repeat;
     background-attachment: scroll;
     color: $cl-white;
     margin: 0px 0px 0px 0px;
+}
+
+p {
+	margin-top: 0;
 }
 
 a {
@@ -71,10 +76,10 @@ h1 {
     }
 }
 h2 {
-    color: #c3c4d1;
+    color: $cl-ghost;
     font: normal 26pt "Times New Roman", Times, serif;
     text-transform: uppercase;
-    margin: 0px;
+    margin: 0;
     padding-bottom: 0px;
 }
 input[type="text"], textarea {
@@ -84,8 +89,8 @@ input[type="text"], textarea {
 }
 
 button {
-	@include fontRender(#000000, 700, 'Amiri', 15px, 20px, normal);
-	background-color: #666666;
+	@include fontRender($cl-black, 700, 'Amiri', 15px, 20px, normal);
+	background-color: $cl-domino;
 	border: 0;
 	cursor: pointer;
 	display: inline-block;
@@ -94,7 +99,7 @@ button {
 	padding: 5px 10px 3px 10px;
 	text-transform: uppercase;
 	&:disabled {
-		background-color: #333333;
+		background-color: $cl-taupe;
 		cursor: text;
 	}
 }
