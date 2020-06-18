@@ -1,11 +1,13 @@
 .comp-bio-modal {
+  @include fontRender($cl-white, 400, 'Open Sans', 14px, 20px, normal);
   z-index: 1;
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
+  text-align: left;
   top: 0;
   left: 0;
-    right: 0;
-    bottom: 0;
+  right: 0;
+  bottom: 0;
   &.hidden {
     display: none;
   }
@@ -20,7 +22,7 @@
     z-index: 1;
   }
   .modal-content {
-    background-color: #000;
+    background-color: $cl-black;
     max-height: 400px;
     overflow-y: auto;
     padding: 10px;

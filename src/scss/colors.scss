@@ -1,9 +1,22 @@
 $cl-white: #fff;
 $cl-black: #000;
 $cl-gray: #7e7e7e;
+$cl-shark: #191a1c;
 $cl-nepal: #93a5bf;
 $cl-tropical-blue: #c3ddf9;
 $cl-half-baked: #8fcbd1;
-$cl-page-hdr-fill: #c3c4d1;
-$cl-page-hdr-stroke: #414c5c;
+
+//page headings
+$cl-ghost: #c3c4d1;
+$cl-river-bed: #414c5c;
+
+$cl-page-hdr-fill: $cl-ghost;
+$cl-page-hdr-stroke: $cl-river-bed;
+
+//navigation
 $cl-nav-active-fill: lighten($cl-page-hdr-fill, 20%);
+
+
+//buttons
+$cl-domino: #8a7b60;
+$cl-taupe: #453d30;
