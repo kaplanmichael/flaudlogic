@@ -24,12 +24,16 @@ export default class MemberCard extends React.Component {
     render() {
         return (
           <>
-            <section className="member-card">
-                <img src={this.props.member.thumburl} onClick={() => this.openModal()} alt=""/>
-                <strong>{this.props.member.name}</strong>
-                <em>{this.props.member.role}</em>
+            <figure className="member-card">
+              <div onClick={() => this.openModal()}>
+                <img src={this.props.member.thumburl}/>
+                <figcaption>
+                  <strong>{this.props.member.name}</strong>
+                  <em>{this.props.member.role}</em>
+                </figcaption>
+              </div>
                 <BioModal obj={this.props.member} visible={this.state.visible} clickAction={() => this.closeModal()}/>
-            </section>
+            </figure>
           </>
         );
     }

@@ -1,39 +1,76 @@
 //@import '../../less/colors';
 
 .member-card {
+    background-color: $cl-shark;
+    border-radius: 7px;
+    cursor: pointer;
     display: inline-block;
-    font-size: 15px;
-    height: 130px;
+    @include fontRender($cl-white, 400, 'Open Sans', 13px, 15px, normal);
+    height: 178px;
     margin: 0px 20px 10px 0px;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    text-align: center;
     vertical-align: top;
     width: 198px;
-    strong {
-        display: block;
-        font-weight: normal;
-    }
-    em {
-        display: block;
+    figcaption {
+      strong {
+          color: $cl-page-hdr-fill;
+          display: block;
+          margin-bottom: 5px;
+      }
+      em {
+          display: block;
+      }
     }
     img {
         -webkit-filter: sepia(1);
         border: none;
-        float: left;
         clear: right;
-        cursor: pointer;
-        display: block;
+        display: inline-block;
         filter: sepia(1);
-        margin-right: 5px;
+        margin-bottom: 5px;
+        position: relative;
         width: 100px;
         height: 100px;
     }
-    a:hover {
-        color: $cl-white;
-        border: none;
-        text-decoration: none;
+    &:hover:after {
+      animation: shine 3s ease-out;
+      //animation-fill-mode: forwards;
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      top: -110%;
+      left: -210%;
+      width: 200%;
+      height: 200%;
+      opacity: 0;
+      transform: rotate(30deg);
+
+      background: rgba(255, 255, 255, 0.13);
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.13) 0%,
+        rgba(255, 255, 255, 0.13) 77%,
+        rgba(255, 255, 255, 0.5) 92%,
+        rgba(255, 255, 255, 0.0) 100%
+      );
     }
 }
-div.bio_container a, div.bio_container a:link, div.bio_container a:visited {
-    color: $cl-white;
-    border: none;
-    text-decoration: none;
+@keyframes shine{
+  10% {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+  100% {
+    opacity: 0;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+  }
 }
