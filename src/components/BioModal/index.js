@@ -11,7 +11,7 @@ export default class BioModal extends React.Component {
                 <figure>
                   <img src={this.props.obj.imageurl} alt={`${this.props.obj.name}`}/>
                   <figcaption>
-                    {this.props.obj.name}<br />
+                    <h3>{this.props.obj.name}</h3>
                     <em>{this.props.obj.role}</em>
                   </figcaption>
                 </figure>

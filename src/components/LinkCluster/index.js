@@ -14,7 +14,7 @@ export default class LinkCluster extends React.Component {
         });
         return (
             <div className="link-container">
-                {this.state.title}<br />
+                <h3>{this.state.title}</h3>
                 <ul>
                     {listItems}
                 </ul>
