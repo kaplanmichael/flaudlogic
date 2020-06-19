@@ -17,7 +17,6 @@ const history = createBrowserHistory();
 ReactGA.initialize(trackingId);
 
 history.listen(({ action, location }) => {
-  debugger;
   ReactGA.set({ page: location.pathname + location.hash }); // Update the user's current page
   ReactGA.pageview(location.pathname + location.hash); // Record a pageview for the given page
   console.log(history, location.pathname + location.hash)
@@ -35,7 +34,10 @@ export default class App extends React.Component {
                         />
                     )}/>
                     <Route path='/news' component={NewsPage}/>
-                    <Route path='/about' component={AboutPage}/>
+                    <Route path='/about' render={(props) => {
+                       document.title = "About | Flaud Logic";
+                       return <AboutPage {...props} />;
+                     }}/>
                     <Route path='/media' component={MediaPage}/>
                     <Route path='/press' component={PressPage}/>
                     <Route path='/links' component={LinksPage}/>
