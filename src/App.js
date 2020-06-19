@@ -16,9 +16,11 @@ const trackingId = "UA-1635823-1";
 const history = createBrowserHistory();
 ReactGA.initialize(trackingId);
 
-history.listen(location => {
-  ReactGA.set({ page: location.pathname }); // Update the user's current page
-  ReactGA.pageview(location.pathname); // Record a pageview for the given page
+history.listen(({ action, location }) => {
+  debugger;
+  ReactGA.set({ page: location.pathname + location.hash }); // Update the user's current page
+  ReactGA.pageview(location.pathname + location.hash); // Record a pageview for the given page
+  console.log(history, location.pathname + location.hash)
 });
 
 export default class App extends React.Component {
