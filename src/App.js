@@ -3,7 +3,6 @@ import {HashRouter as Router,Switch, Route} from 'react-router-dom';
 import SplashPage from './pages/SplashPage'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
-import NewsPage from './pages/NewsPage'
 import MediaPage from './pages/MediaPage'
 import PressPage from './pages/PressPage'
 import LinksPage from './pages/LinksPage'
@@ -19,7 +18,6 @@ ReactGA.initialize(trackingId);
 history.listen(({ action, location }) => {
   ReactGA.set({ page: location.pathname + location.hash }); // Update the user's current page
   ReactGA.pageview(location.pathname + location.hash); // Record a pageview for the given page
-  console.log(history, location.pathname + location.hash)
 });
 
 export default class App extends React.Component {
@@ -27,21 +25,34 @@ export default class App extends React.Component {
         return (
             <Router history={history}>
                 <Switch>
-                    <Route exact path='/' component={SplashPage}/>
-                    <Route path='/home' render={(routeProps) => (
-                        <HomePage
-                            {...routeProps}
-                        />
-                    )}/>
-                    <Route path='/news' component={NewsPage}/>
+                    <Route exact path='/' render={(props) => {
+                      document.title = "Welcome | Flaud Logic";
+                      return <SplashPage {...props} />;
+                    }}/>
+                    <Route path='/home' render={(props) => {
+                      document.title = "Home | Flaud Logic";
+                      return <HomePage {...props} />;
+                    }}/>
                     <Route path='/about' render={(props) => {
-                       document.title = "About | Flaud Logic";
-                       return <AboutPage {...props} />;
-                     }}/>
-                    <Route path='/media' component={MediaPage}/>
-                    <Route path='/press' component={PressPage}/>
-                    <Route path='/links' component={LinksPage}/>
-                    <Route path='/contact' component={ContactPage}/>
+                      document.title = "About | Flaud Logic";
+                      return <AboutPage {...props} />;
+                    }}/>
+                    <Route path='/media' render={(props) => {
+                      document.title = "Media | Flaud Logic";
+                      return <MediaPage {...props} />;
+                    }}/>
+                    <Route path='/press' render={(props) => {
+                      document.title = "Press | Flaud Logic";
+                      return <PressPage {...props} />;
+                    }}/>
+                    <Route path='/links' render={(props) => {
+                      document.title = "Links | Flaud Logic";
+                      return <LinksPage {...props} />;
+                    }}/>
+                    <Route path='/contact' render={(props) => {
+                      document.title = "Contact | Flaud Logic";
+                      return <ContactPage {...props} />;
+                    }}/>
                 </Switch>
             </Router>
         )
