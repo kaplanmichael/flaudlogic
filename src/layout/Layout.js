@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import Navigation from '../components/Navigation';
-import Analytics from '../components/common/Analytics';
 import CDBabyBuyNow from '../components/common/CDBabyBuyNow';
 import TwitterTimeline from '../components/common/TwitterTimeline';
 //import FacebookWidget from '../components/common/FacebookWidget';
@@ -13,7 +12,6 @@ export default class Layout extends React.Component {
         return (
             <div id="content-container" className={this.props.pageClass}>
                 <Header>
-                    <Analytics />
                     <Navigation />
                 </Header>
                 <div className="column left">
