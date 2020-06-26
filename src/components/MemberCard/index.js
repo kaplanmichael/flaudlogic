@@ -1,5 +1,6 @@
 import React from 'react';
 import BioModal from '../BioModal';
+import ReactGA from 'react-ga';
 
 export default class MemberCard extends React.Component {
     constructor(props) {
@@ -10,6 +11,7 @@ export default class MemberCard extends React.Component {
     }
 
     openModal() {
+      ReactGA.modalview(`Bio — ${this.props.member.name}`);
       this.setState({
         visible: true
       });

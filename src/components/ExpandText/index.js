@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactGA from 'react-ga';
 
 export default class ExpandText extends React.Component {
     constructor(props) {
@@ -27,7 +28,7 @@ export default class ExpandText extends React.Component {
         return (
             <div className="comp-expand-text">
                 {content}
-                <button onClick={this.toggleText}>{this.state.isVisible === true ? this.props.lessTextLabel : this.props.moreTextLabel}</button>
+                <button onClick={this.toggleText}>{this.getButtonLabel()}</button>
             </div>
         );
     }
@@ -58,9 +59,18 @@ export default class ExpandText extends React.Component {
      * Changes component's state when button is clicked
      */
     toggleText() {
-        this.setState({
-            isVisible: !(this.state.isVisible)
-        });
+      ReactGA.event({
+        category: 'User',
+        action: 'Click',
+        label: this.getButtonLabel()
+      });
+      this.setState({
+          isVisible: !(this.state.isVisible)
+      });
+    }
+
+    getButtonLabel() {
+      return (this.state.isVisible === true ? this.props.lessTextLabel : this.props.moreTextLabel);
     }
 
 }

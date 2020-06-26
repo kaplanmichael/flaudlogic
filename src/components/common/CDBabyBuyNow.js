@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 
 export default class CDBabyBuyNow extends React.Component {
 	render () {
@@ -12,7 +13,13 @@ export default class CDBabyBuyNow extends React.Component {
 		}
 		return (
             <div>
-							<a href="https://play.google.com/store/music/album/Flaud_Logic_Flaud_Logic?id=Bsxa5vsbjhxgjfos6yihjncwim4&hl=en_US"  target="_blank" rel="noopener noreferrer" style={badgeStyle} title="Flaud Logic: Flaud Logic" alt="Flaud Logic: Flaud Logic" >&nbsp;</a>
+							<a href="https://play.google.com/store/music/album/Flaud_Logic_Flaud_Logic?id=Bsxa5vsbjhxgjfos6yihjncwim4&hl=en_US"  target="_blank" rel="noopener noreferrer" style={badgeStyle} title="Flaud Logic: Flaud Logic" alt="Flaud Logic: Flaud Logic" onClick={()=> {
+								ReactGA.event({
+	                category: 'User',
+	                action: 'Click',
+	                label: 'Buy The Album'
+	              });
+							}}>&nbsp;</a>
             </div>
         );
     }

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 const BlogNav = ({pageTokens, pagePos, setPagePos, data}) => {
 
 const showPrevButton = pageTokens[pagePos - 1] || pageTokens[pagePos - 1] === "";
@@ -8,12 +9,22 @@ const showNextButton = data.items && data.items.length === 10;
           <button disabled={!showPrevButton} onClick={
             () => {
               setPagePos(pagePos - 1);
+              ReactGA.event({
+                category: 'User',
+                action: 'Click',
+                label: 'Prev'
+              });
             }
           }>Prev</button>
 
           <button disabled={!showNextButton} onClick={
             () => {
               setPagePos(pagePos + 1);
+              ReactGA.event({
+                category: 'User',
+                action: 'Click',
+                label: 'Next'
+              });
             }
           }>Next</button>
 
