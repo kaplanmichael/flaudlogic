@@ -17,6 +17,10 @@ export default class MemberCard extends React.Component {
       });
     }
 
+    hasBio() {
+      return (this.props.member.bio && this.props.member.bio !== "" );
+    }
+
     closeModal() {
       this.setState({
         visible: false
@@ -26,15 +30,19 @@ export default class MemberCard extends React.Component {
     render() {
         return (
           <>
-            <figure className="member-card">
-              <div onClick={() => this.openModal()}>
+            <figure className={`member-card ${ this.hasBio() ? '': 'no-bio' }` }>
+              <div onClick={() => {
+                if(this.hasBio()) {
+                    this.openModal()
+                }
+              }}>
                 <img src={this.props.member.thumburl} alt={`${this.props.member.name}`}/>
                 <figcaption>
                   <strong>{this.props.member.name}</strong>
                   <em>{this.props.member.role}</em>
                 </figcaption>
               </div>
-                <BioModal obj={this.props.member} visible={this.state.visible} clickAction={() => this.closeModal()}/>
+              <BioModal obj={this.props.member} visible={this.state.visible} clickAction={() => this.closeModal()}/>
             </figure>
           </>
         );
