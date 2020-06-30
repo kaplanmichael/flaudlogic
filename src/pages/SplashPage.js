@@ -18,7 +18,7 @@ export default class SplashPage extends React.Component {
 						<area coords="376,553,424,577" href="http://www.youtube.com/user/FlaudLogic" target="_blank" alt="YouTube Channel" title="YouTube Channel" rel="noopener noreferrer"/>
 						<area coords="477,553,544,577" href="http://twitter.com/flaudlogic" target="_blank" alt="Twitter" title="Twitter" rel="noopener noreferrer"/>
 						<area coords="425,553,453,577" href="http://news.flaudlogic.com/feeds/posts/default?alt=rss" target="_blank" alt="RSS" title="RSS" rel="noopener noreferrer"/>
-						<area alt="" coords="570,525,646,539" href="http://www.abstrata.net" target="_blank" rel="noopener noreferrer"/>
+						<area alt="" coords="570,525,646,539" href="https://gustavosazes.com/" target="_blank" rel="noopener noreferrer"/>
 						<area coords="453,553,477,577" href="http://www.facebook.com/flaudlogic" target="_blank" alt="Facebook Page" title="Facebook Page" rel="noopener noreferrer"/>
 					</map>
 				</section>
