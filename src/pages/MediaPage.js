@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../layout/Layout';
 import DynamicImageGrid from '../components/DynamicImageGrid';
+import ReactGA from 'react-ga';
 
 const releaseparty = {};
 const traxeast = {};
@@ -21,8 +22,16 @@ export default class MediaPage extends React.Component {
                 <section className="media-page">
         					<h1>Media</h1>
         					<h2>Discography</h2>
-        					<p><strong>Flaud Logic (Released: 3/31/2013)</strong><br />
-        					Package includes 4-panel full-color digipak, 6-page full-color gatefold with original artwork, song lyrics, and album credits. Click thumbnails to enlarge.</p>
+        					<h3>Flaud Logic (Released: 3/31/2013)</h3>
+        					<p>Package includes 4-panel full-color digipak, 6-page full-color gatefold with original artwork, song lyrics, and album credits. Click thumbnails below to enlarge.</p>
+                  <ReactGA.OutboundLink
+                    eventLabel="Buy The Album"
+                    to="https://play.google.com/store/music/album/Flaud_Logic_Flaud_Logic?id=Bsxa5vsbjhxgjfos6yihjncwim4&hl=en_US"
+                    target="_blank"
+                  >
+                    Buy The Album
+                  </ReactGA.OutboundLink>
+                  <br /><br />
         					<DynamicImageGrid data={mktg}/>
         					<h2>Images</h2>
         					<p>Photos from the Flaud Logic Album Release Party – 3/30/2013</p>
