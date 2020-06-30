@@ -79,7 +79,7 @@ h2 {
     color: $cl-ghost;
     font: normal 26pt "Times New Roman", Times, serif;
     text-transform: uppercase;
-    margin: 0;
+    margin: 0 0 10px 0;
     padding-bottom: 0px;
 }
 
@@ -110,11 +110,6 @@ button {
 		background-color: $cl-taupe;
 		cursor: text;
 	}
-}
-
-aside {
-	color: blue;
-	display: inline;
 }
 
 .hideMe {
