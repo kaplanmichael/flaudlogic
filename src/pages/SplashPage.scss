@@ -1,0 +1,45 @@
+.splash-page {
+	figure {
+		border: 1px solid red;
+		margin: 0;
+		position: relative;
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+		figcaption {
+			position: absolute;
+			left: 50%;
+			text-align: center;
+			width: 100%;
+			top: 426px;
+			transform: translateX(-50%);
+			h1 {
+				-webkit-text-stroke-color: $cl-page-hdr-stroke;
+				-webkit-text-stroke-width: 2px;
+				color: $cl-page-hdr-fill;
+				font-family: birch-std, serif;
+				font-size: 66px;
+				font-style: normal;
+				font-weight: 400;
+				letter-spacing: 18px;
+				line-height: 62px;
+				margin: 0 0 2px 0;
+				text-transform: uppercase;
+			}
+			h4 {
+				color: $cl-white;
+				font-family: birch-std, serif;
+				font-size: 22px;
+				font-style: normal;
+				font-weight: 400;
+				letter-spacing: 7px;
+				line-height: 22px;
+				margin: 0 0 6px 0;
+				text-transform: uppercase;
+			}
+		}
+
+	}
+
+}

@@ -3,7 +3,7 @@ import React from 'react';
 export default class SplashLayout extends React.Component {
     render() {
         return (
-            <div>
+            <div className="splash-page">
                     {this.props.children}
             </div>
         )

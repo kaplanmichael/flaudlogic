@@ -64,25 +64,5 @@ footer {
       }
     }
   }
-  .copyright {
-    text-align: center;
-    font: normal 9pt "Times New Roman", Times, serif;
-    color: $cl-gray;
-    text-transform: uppercase;
-    a:link {
-      font: normal 9pt "Times New Roman", Times, serif;
-      color: $cl-gray;
-      text-decoration: underline;
-    }
-    a:hover {
-      font: normal 9pt "Times New Roman", Times, serif;
-      color: $cl-gray;
-      text-decoration: none;
-    }
-    a:visited {
-      font: normal 9pt "Times New Roman", Times, serif;
-      color: $cl-gray;
-      text-decoration: underline;
-    }
-  }
+
 }
