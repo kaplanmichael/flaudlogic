@@ -5,12 +5,13 @@
 @import './scss/mixins';
 
 //components
-@import './components/BlogViewer/BlogViewer';
+@import './components/BioModal/BioModal';
 @import './components/BlogViewer/BlogNav';
+@import './components/BlogViewer/BlogViewer';
 @import './components/common/Footer';
+@import './components/common/SocialMediaIcons';
 @import './components/MemberCard/MemberCard';
 @import './components/Navigation/Navigation';
-@import './components/BioModal/BioModal';
 
 //layout
 @import './layout/Layout';

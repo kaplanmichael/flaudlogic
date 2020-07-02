@@ -1,0 +1,18 @@
+ul.social-media-icons {
+    display: inline-flex;
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    li {
+      margin-right: 4%;
+      flex: 0 1 auto;
+      svg {
+        background-color: $cl-ghost;
+        border-radius: 20%;
+        fill: $cl-river-bed;
+        width: auto;
+      }
+    }
+}
