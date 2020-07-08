@@ -2,6 +2,24 @@ import React from 'react';
 import Layout from '../layout/Layout';
 import DynamicImageGrid from '../components/DynamicImageGrid';
 import ReactGA from 'react-ga';
+import se_1_mp3 from '../media/audio/se_1.mp3';
+import se_1_ogg from '../media/audio/se_1.ogg';
+import se_1_wav from '../media/audio/se_1.wav';
+import se_2_mp3 from '../media/audio/se_2.mp3';
+import se_2_ogg from '../media/audio/se_2.ogg';
+import se_2_wav from '../media/audio/se_2.wav';
+import sg_1_mp3 from '../media/audio/sg_1.mp3';
+import sg_1_ogg from '../media/audio/sg_1.ogg';
+import sg_1_wav from '../media/audio/sg_1.wav';
+import sh_1_mp3 from '../media/audio/sh_1.mp3';
+import sh_1_ogg from '../media/audio/sh_1.ogg';
+import sh_1_wav from '../media/audio/sh_1.wav';
+import oy_1_mp3 from '../media/audio/oy_1.mp3';
+import oy_1_ogg from '../media/audio/oy_1.ogg';
+import oy_1_wav from '../media/audio/oy_1.wav';
+import oy_2_mp3 from '../media/audio/oy_2.mp3';
+import oy_2_ogg from '../media/audio/oy_2.ogg';
+import oy_2_wav from '../media/audio/oy_2.wav';
 
 const releaseparty = {};
 const traxeast = {};
@@ -33,6 +51,48 @@ export default class MediaPage extends React.Component {
                   </ReactGA.OutboundLink>
                   <br /><br />
         					<DynamicImageGrid data={mktg}/>
+                  <p>Secret Engine</p>
+                  <audio controls="controls">
+                      <source src={se_1_mp3} type="audio/mpeg" />
+                      <source src={se_1_ogg} type="audio/ogg" />
+                      <source src={se_1_wav} type="audio/wav" />
+                      Your browser does not support the HTML5 audio element.
+                  </audio>
+                  <audio controls="controls">
+                      <source src={se_2_mp3} type="audio/mpeg" />
+                      <source src={se_2_ogg} type="audio/ogg" />
+                      <source src={se_2_wav} type="audio/wav" />
+                      Your browser does not support the HTML5 audio element.
+                  </audio>
+                  <p>Say Goodbye</p>
+                  <audio controls="controls">
+                      <source src={sg_1_mp3} type="audio/mpeg" />
+                      <source src={sg_1_ogg} type="audio/ogg" />
+                      <source src={sg_1_wav} type="audio/wav" />
+                      Your browser does not support the HTML5 audio element.
+                  </audio>
+                  <p>Shanna</p>
+                  <audio controls="controls">
+                      <source src={sh_1_mp3} type="audio/mpeg" />
+                      <source src={sh_1_ogg} type="audio/ogg" />
+                      <source src={sh_1_wav} type="audio/wav" />
+                      Your browser does not support the HTML5 audio element.
+                  </audio>
+                  <p>One Year</p>
+                  <audio controls="controls">
+                      <source src={oy_1_mp3} type="audio/mpeg" />
+                      <source src={oy_1_ogg} type="audio/ogg" />
+                      <source src={oy_1_wav} type="audio/wav" />
+                      Your browser does not support the HTML5 audio element.
+                  </audio>
+                  <audio controls="controls">
+                      <source src={oy_2_mp3} type="audio/mpeg" />
+                      <source src={oy_2_ogg} type="audio/ogg" />
+                      <source src={oy_2_wav} type="audio/wav" />
+                      Your browser does not support the HTML5 audio element.
+                  </audio>
+
+
         					<h2>Images</h2>
         					<p>Photos from the Flaud Logic Album Release Party – 3/30/2013</p>
         					<DynamicImageGrid data={releaseparty}/>
