@@ -28,14 +28,17 @@
     padding: 10px;
     figure {
       margin: 0;
+      figcaption {
+        h3 {
+          margin-bottom: 0;
+        }
+        em {
+          display: block;
+          margin-bottom: 10px;
+        }        
+      }
     }
-    h3 {
-      margin-bottom: 0;
-    }
-    em {
-      display: block;
-      margin-bottom: 10px;
-    }
+
   }
   .modal-bkgd {
 
