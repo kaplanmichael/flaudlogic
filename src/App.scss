@@ -48,6 +48,19 @@ p {
 	margin-top: 0;
 }
 
+blockquote {
+	margin-bottom: 25px;
+	p {
+		font-style: italic;
+		margin-bottom: 5px;
+	}
+	small {
+		display: block;
+		font-size: 11px;
+		text-align: right;
+	}
+}
+
 a {
     color: $cl-half-baked;
     text-decoration:none;

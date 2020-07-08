@@ -46,12 +46,18 @@ export default class PressPage extends React.Component {
                 </ReactGA.OutboundLink>
                 &nbsp;(March 2, 2013)</p>
                 <h2>Reviews</h2>
-      					<blockquote>"[The album is] awesome...Killer production. Man, when is the live concert in Berlin?"
-      					     <em>— Benny Lackner,  Pianist, Composer</em></blockquote>
-      					<blockquote>"...I have listened to it several times from start to finish, and I'm really digging it.  It gets better every time which says a lot about the depth of the work.  Takes me back to the days when I was obsessed with Tales From Topographic Oceans.  [Flaud Logic] is actually even more dynamic and moving on many fronts &#151; certainly more modern.  The production sounds great — the drums, variety of ripping guitar sounds, and vocals.  There is not much out there like this, so I'm so glad [it is] filling a void."
-      					     <em>— Chris Rich,  Composer, Theater of the Mind Rock Opera</em></blockquote>
-      					<blockquote>"Man, I'm looking forward to more stuff in the future from [Michael Kaplan]...This is a very, very impressive album...It is some tremendous stuff, in my opinion."
-      					     <em>— Frank Remington, Prog Palace Radio</em></blockquote>
+      					<blockquote>
+                    <p>"[The album is] awesome...Killer production. Man, when is the live concert in Berlin?"</p>
+      					    <small>— Benny Lackner,  Pianist, Composer</small>
+                </blockquote>
+      					<blockquote>
+                    <p>"...I have listened to it several times from start to finish, and I'm really digging it.  It gets better every time which says a lot about the depth of the work.  Takes me back to the days when I was obsessed with Tales From Topographic Oceans.  [Flaud Logic] is actually even more dynamic and moving on many fronts — certainly more modern.  The production sounds great — the drums, variety of ripping guitar sounds, and vocals.  There is not much out there like this, so I'm so glad [it is] filling a void."</p>
+      					    <small>— Chris Rich,  Composer, Theater of the Mind Rock Opera</small>
+                </blockquote>
+      					<blockquote>
+                    <p>"Man, I'm looking forward to more stuff in the future from [Michael Kaplan]...This is a very, very impressive album...It is some tremendous stuff, in my opinion."</p>
+      					    <small>— Frank Remington, Prog Palace Radio</small>
+                </blockquote>
                 <p>
                   <ReactGA.OutboundLink
                     eventLabel="Review - Prognaut"

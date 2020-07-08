@@ -133,9 +133,11 @@ export default class AboutPage extends React.Component {
                 <h1>About</h1>
                 <ExpandText>
                     <section>
-                        <p className="quote"> "...really grabbing — like a black hole that just sucked me in from
+                    <blockquote>
+                        <p>"...really grabbing — like a black hole that just sucked me in from
                             the get-go."</p>
-                        <p className="byline">— Chris Rich, Composer, Theater of the Mind Rock Opera</p>
+          					    <small>— Chris Rich, Composer, Theater of the Mind Rock Opera</small>
+                    </blockquote>
                         <p>Flaud Logic originated in Brooklyn, New York in 2008. Originally an attempt to demo some song
                             ideas composer Michael Kaplan had written over the years, it gradually evolved into a
                             full-length album featuring performances from a cadre of talented musicians including
