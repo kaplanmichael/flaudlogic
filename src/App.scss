@@ -12,6 +12,7 @@
 @import './components/common/SocialMediaIcons';
 @import './components/MemberCard/MemberCard';
 @import './components/Navigation/Navigation';
+@import './components/DynamicImageGrid/DynamicImageGrid';
 
 //layout
 @import './layout/Layout';
@@ -19,6 +20,7 @@
 
 //pages
 @import './pages/MediaPage';
+@import './pages/PressPage';
 @import './pages/AboutPage';
 @import './pages/LinksPage';
 @import './pages/SplashPage';
