@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactGA from 'react-ga';
 
 export default class LinkCluster extends React.Component {
     constructor(props) {
@@ -10,7 +11,18 @@ export default class LinkCluster extends React.Component {
     }
     render() {
         const listItems = React.Children.map( this.props.children, (child) => {
-            return (<li key={child.toString()}>{child}</li>)
+          console.log(child)
+            return (
+              <li key={child.props.children}>
+                <ReactGA.OutboundLink
+                  eventLabel={`Links - ${child.props.children}`}
+                  to={child.props.href}
+                  target="_blank"
+                >
+                  {child.props.children}
+                </ReactGA.OutboundLink>
+              </li>
+            )
         });
         return (
             <div className="link-container">
