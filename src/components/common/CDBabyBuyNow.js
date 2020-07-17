@@ -1,26 +1,27 @@
 import React from 'react';
 import ReactGA from 'react-ga';
 
+const targetURL = 'https://play.google.com/store/music/album/Flaud_Logic_Flaud_Logic?id=Bsxa5vsbjhxgjfos6yihjncwim4&hl=en_US';
 export default class CDBabyBuyNow extends React.Component {
+	handleClick = () => {
+		ReactGA.event({
+			category: 'User',
+			action: 'Click',
+			label: 'Buy Now'
+		});
+		window.open(targetURL);
+	}
 	render () {
-		const badgeStyle = {
-			display: 'inline-block',
-			background: 'url(http://CDBaby.name/f/l/flaudlogic_small.jpg) 117px 9px no-repeat, url(https://content.cdbaby.com/img/links/link-artwork-horz-light-buy-album.png) no-repeat',
-			backgroundSize: '100px, 100%',
-			width: '225px',
-			height: '120px',
-			marginBottom: '20px'
-		}
 		return (
-            <div>
-							<a href="https://play.google.com/store/music/album/Flaud_Logic_Flaud_Logic?id=Bsxa5vsbjhxgjfos6yihjncwim4&hl=en_US"  target="_blank" rel="noopener noreferrer" style={badgeStyle} title="Flaud Logic: Flaud Logic" alt="Flaud Logic: Flaud Logic" onClick={()=> {
-								ReactGA.event({
-	                category: 'User',
-	                action: 'Click',
-	                label: 'Buy The Album'
-	              });
-							}}>&nbsp;</a>
-            </div>
+            <aside className="comp-buy-now">
+							<figure>
+								<img src="http://CDBaby.name/f/l/flaudlogic_small.jpg" title="Flaud Logic: Flaud Logic" alt="Flaud Logic: Flaud Logic"  onClick={() => this.handleClick()} />
+								<figcaption>
+									<h2>Flaud Logic</h2>
+									<button onClick={() => this.handleClick()}>Buy Now</button>
+								</figcaption>
+							</figure>
+            </aside>
         );
     }
 
