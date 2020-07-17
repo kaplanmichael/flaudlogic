@@ -17,7 +17,7 @@ export default class Footer extends React.Component {
                 </nav>
               <span className="copyright">
                 Reproduction of material from any flaudlogic.com page without written permission from the author is strictly prohibited.<br />
-                ©2018 Copyright Michael D. Kaplan. All rights reserved.  Website layout by &nbsp;
+                ©2020 Copyright Michael D. Kaplan. All rights reserved.  Website layout by &nbsp;
                 <ReactGA.OutboundLink
                   eventLabel="Gustavo Sazes"
                   to="https://gustavosazes.com/"
