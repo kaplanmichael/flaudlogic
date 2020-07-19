@@ -25,6 +25,7 @@
 @import './pages/AboutPage';
 @import './pages/LinksPage';
 @import './pages/SplashPage';
+@import './pages/HomePage';
 
 * {
 	box-sizing: border-box;
@@ -159,4 +160,16 @@ button {
 }
 .showMe {
 	display: inline;
+}
+
+//HomeCarousel
+.slick-slider .slick-track, .slick-slider .slick-list {
+	height: 250px;
+	margin: 2px 0px 10px 0px;
+}
+.slick-slide {
+	img {
+		height: auto;
+		width: 100%;
+	}
 }

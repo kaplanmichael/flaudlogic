@@ -10,6 +10,8 @@ import ContactPage from './pages/ContactPage'
 import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 import './App.scss';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const trackingId = "UA-1635823-1";
 const history = createBrowserHistory();
