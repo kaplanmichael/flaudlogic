@@ -8,6 +8,7 @@ export default class Navigation extends React.Component {
                 <nav>
                     <ul className="nav-items">
                         <li><NavLink to='/home' className="home"><span>Home</span></NavLink></li>
+                        <li><NavLink to='/blog' className="blog"><span>Blog</span></NavLink></li>
                         <li><NavLink to='/about' className="about"><span>About</span></NavLink></li>
 						            <li><NavLink to='/media' className="media"><span>Media</span></NavLink></li>
                         <li><NavLink to='/press' className="press"><span>Press</span></NavLink></li>

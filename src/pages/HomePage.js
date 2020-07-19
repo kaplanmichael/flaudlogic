@@ -8,7 +8,7 @@ export default class HomePage extends React.Component {
         return (
             <Layout pageClass="home-page">
                 <HomeCarousel />
-                <BlogViewerX />
+                <p>Additional content coming soon!</p>
             </Layout>
         )
     }

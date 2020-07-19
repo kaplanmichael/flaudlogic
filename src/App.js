@@ -2,6 +2,7 @@ import React from 'react';
 import {HashRouter as Router,Switch, Route} from 'react-router-dom';
 import SplashPage from './pages/SplashPage'
 import HomePage from './pages/HomePage'
+import BlogPage from './pages/BlogPage'
 import AboutPage from './pages/AboutPage'
 import MediaPage from './pages/MediaPage'
 import PressPage from './pages/PressPage'
@@ -35,6 +36,11 @@ export default class App extends React.Component {
                       document.title = "Home | Flaud Logic";
                       ReactGA.set({ page: window.location.pathname + window.location.hash }); // Update the user's current page
                       return <HomePage {...props} />;
+                    }}/>
+                    <Route path='/blog' render={(props) => {
+                      document.title = "Blog | Flaud Logic";
+                      ReactGA.set({ page: window.location.pathname + window.location.hash }); // Update the user's current page
+                      return <BlogPage {...props} />;
                     }}/>
                     <Route path='/about' render={(props) => {
                       document.title = "About | Flaud Logic";
