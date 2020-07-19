@@ -9,11 +9,11 @@ function importAll (r,dataStore) {
 }
 importAll(require.context("../../images/gallery/trax_east", false, /\.(gif|jpg|png)$/), mktg);
 
-
 export default class HomeCarousel extends React.Component {
 
   render() {
         const settings = {
+         adaptiveHeight: true,
          arrows: false,
          autoplay: true,
          autoplaySpeed: 7500,
