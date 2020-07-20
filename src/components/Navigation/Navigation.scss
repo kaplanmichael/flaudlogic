@@ -1,10 +1,26 @@
 header {
+  position: relative;
   nav {
     background: $cl-black url('../../images/art_nav_bkgd.gif') no-repeat scroll center top;
     height: 48px;
     margin: 0;
+    overflow: hidden;
     padding: 0px;
     text-align: center;
+    .nav-trigger {
+      border: 1px solid red;
+      display: none;
+      fill: $cl-white;
+      height: 30px;
+      position: absolute;
+      right: 17px;
+      stroke: $cl-white;
+      top: 17px;
+      width: 30px;
+      @media only screen and (max-width: 768px) {
+        display: block;
+      }
+    }
     ul {
       display: inline-block;
       list-style: none;
@@ -38,7 +54,13 @@ header {
             text-decoration: none;
           }
         }
-
+        @media only screen and (max-width: 768px) {
+            display: block;
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        background-color: $cl-black;
+        width: 10%;
       }
     }
     ul.nav-items {
@@ -61,6 +83,9 @@ header {
       }
 
     }
-
+    @media only screen and (max-width: 768px) {
+        height: auto;
+        text-align: left;
+    }
   }
 }
