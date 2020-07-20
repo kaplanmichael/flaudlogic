@@ -1,11 +1,12 @@
 footer {
   margin: 100px auto 0px auto;
-  text-align: center;
   padding-bottom: 40px;
+  text-align: center;
   nav {
     background: $cl-black url('../../images/art_nav_bkgd.gif') no-repeat center -2px;
     height: 48px;
     margin-bottom: 10px;
+    overflow: hidden;
     ul {
       list-style: none;
       margin: 0px;
