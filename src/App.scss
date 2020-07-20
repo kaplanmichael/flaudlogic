@@ -28,8 +28,11 @@
 @import './pages/SplashPage';
 @import './pages/HomePage';
 
+* {
+	box-sizing: border-box;
+}
+
 html {
-		box-sizing: border-box;
 		margin: 0;
 		padding: 0;
 }

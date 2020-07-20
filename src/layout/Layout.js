@@ -10,37 +10,22 @@ export default class Layout extends React.Component {
 
     render() {
         return (
-<>
-            <Header>
-                <Navigation />
-            </Header>
-            <div id="content-container" className={this.props.pageClass}>
-                <div className="column left">
-                    {this.props.children}
-                </div>
-                {this.props.hasSidebar ? <div className="column right"><CDBabyBuyNow /><TwitterTimeline /></div> : ''}
-                <div style={{clear: 'both'}}/>
-            </div>
-            <Footer />
-</>
+            <>
+              <Header>
+                  <Navigation />
+              </Header>
+              <div id="content-container" className={this.props.pageClass}>
+                  <div className="column left">
+                      {this.props.children}
+                  </div>
+                  {this.props.hasSidebar ? <div className="column right"><CDBabyBuyNow /><TwitterTimeline /></div> : ''}
+                  <div style={{clear: 'both'}}/>
+              </div>
+              <Footer />
+            </>
         )
     }
 }
 Layout.defaultProps = {
     hasSidebar: true
 };
-
-
-/*
- <!--|||| Page Body ||||--->
- <div class="column left">
- <!--page title-->
- <img src="images/hdr_links.png" width="232" height="51" alt="" class="title-main" />
- <br />
-
- </div>
- <div class="column right">
-
- </div>
-
- */
