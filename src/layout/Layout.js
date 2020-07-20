@@ -10,17 +10,19 @@ export default class Layout extends React.Component {
 
     render() {
         return (
+<>
+            <Header>
+                <Navigation />
+            </Header>
             <div id="content-container" className={this.props.pageClass}>
-                <Header>
-                    <Navigation />
-                </Header>
                 <div className="column left">
                     {this.props.children}
                 </div>
                 {this.props.hasSidebar ? <div className="column right"><CDBabyBuyNow /><TwitterTimeline /></div> : ''}
                 <div style={{clear: 'both'}}/>
-                <Footer />
             </div>
+            <Footer />
+</>
         )
     }
 }

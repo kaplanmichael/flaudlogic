@@ -11,6 +11,7 @@
 @import './components/common/Footer';
 @import './components/common/SocialMediaIcons';
 @import './components/common/CDBabyBuyNow';
+@import './components/common/Header';
 @import './components/MemberCard/MemberCard';
 @import './components/Navigation/Navigation';
 @import './components/DynamicImageGrid/DynamicImageGrid';
@@ -27,23 +28,16 @@
 @import './pages/SplashPage';
 @import './pages/HomePage';
 
-* {
-	box-sizing: border-box;
-}
-html, body {
-    height: 100%;
-    margin: 0px 0px 1px;
-    padding: 0px;
+html {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
 }
 body {
-    @include fontRender($cl-white, 400, 'Open Sans', 15px, 20px, normal);
-    background-color: $cl-black;
-    background-image: url('./images/art_bkgd.jpg');
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    color: $cl-white;
-    margin: 0px 0px 0px 0px;
+	background: $cl-black url('./images/art_bkgd.jpg') no-repeat 0px 436px scroll;
+	background-size: cover;
+  @include fontRender($cl-white, 400, 'Open Sans', 15px, 20px, normal);
+	color: $cl-white;
 }
 
 p {
@@ -164,12 +158,12 @@ button {
 
 //HomeCarousel
 .slick-slider .slick-track, .slick-slider .slick-list {
-	//height: 250px;
+	height: 400px;
 	margin: 2px 0px 10px 0px;
 }
 .slick-slide {
 	img {
-		height: auto;
-		width: 100%;
+		height: 100%;
+		width: auto;
 	}
 }
