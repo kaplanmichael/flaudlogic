@@ -19,44 +19,23 @@ header {
         width: auto;
         a {
           -webkit-text-stroke-color: $cl-page-hdr-stroke;
-          -webkit-text-stroke-width: 1.5px;
+          -webkit-text-stroke-width: 1px;
           color: $cl-page-hdr-fill;
           display: inline-block;
-          font-family: 'Amiri';
-          font-size: 36px;
-          font-weight: 700;
-          height: 27px;
-          letter-spacing: 17px;
-          line-height: 33px;
+          font-family: birch-std, serif;
+          font-size: 33px;
+          font-weight: 400;
+          letter-spacing: 7px;
+          line-height: 30px;
           text-decoration: none;
           text-transform: uppercase;
-          span {
-            display: inline-block;
-            @include MIXCSSTransform(scale, 0.51, 1.0, 0, 0);
-          }
-          &.home {
-            width: 79px;
-          }
-          &.blog {
-            width: 73px;
-          }
-          &.about {
-            width: 96px;
-          }
-          &.media {
-            width: 95px;
-          }
-          &.contact {
-            width: 133px;
-          }
-          &.press {
-            width: 92px;
-          }
-          &.links {
-            width: 91px;
-          }
+
           &.active {
             color: $cl-nav-active-fill;
+          }
+          &:hover {
+            color: $cl-nav-active-fill;
+            text-decoration: none;
           }
         }
 
@@ -67,7 +46,7 @@ header {
       li {
         padding-left: 28px;
         a {
-          margin-right: 14px;
+          margin-right: 6px;
         }
         &:before {
           background: transparent url('../../images/art_nav_sep.gif') no-repeat scroll left top;

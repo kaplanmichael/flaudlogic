@@ -7,12 +7,12 @@ export default class Navigation extends React.Component {
         return (
                 <nav>
                     <ul className="nav-items">
-                        <li><NavLink to='/home' className="home"><span>Home</span></NavLink></li>
-                        <li><NavLink to='/blog' className="blog"><span>Blog</span></NavLink></li>
-                        <li><NavLink to='/about' className="about"><span>About</span></NavLink></li>
-						            <li><NavLink to='/media' className="media"><span>Media</span></NavLink></li>
-                        <li><NavLink to='/press' className="press"><span>Press</span></NavLink></li>
-                        <li><NavLink to='/links' className="links"><span>Links</span></NavLink></li>
+                        <li><NavLink to='/home'>Home</NavLink></li>
+                        <li><NavLink to='/blog'>Blog</NavLink></li>
+                        <li><NavLink to='/about'>About</NavLink></li>
+						            <li><NavLink to='/media'>Media</NavLink></li>
+                        <li><NavLink to='/press'>Press</NavLink></li>
+                        <li><NavLink to='/links'>Links</NavLink></li>
                     </ul>
                     <SocialMediaIcons height={28}/>
                 </nav>
