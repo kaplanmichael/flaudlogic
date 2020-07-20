@@ -44,6 +44,7 @@ body {
 }
 
 p {
+	@include fontRender($cl-white, 400, 'Open Sans', 15px, 20px, normal);
 	margin-top: 0;
 }
 
