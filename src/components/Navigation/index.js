@@ -1,7 +1,8 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import SocialMediaIcons from '../common/SocialMediaIcons';
 import { ReactComponent as HamburgerIcon } from '../../images/hamburger.svg';
+import MobileLogo from '../../images/logo_fl_hdr_mobile.gif'
 
 export default class Navigation extends React.Component {
 
@@ -22,6 +23,7 @@ export default class Navigation extends React.Component {
     render() {
         return (
                 <nav>
+                  <NavLink to='/home'><img src={MobileLogo} /></NavLink>
                   <HamburgerIcon onClick={() => this.toggleNav()} />
                     <ul className={`nav-items ${this.state.navOpen ? '' : 'hidden'}`}>
                         <li><NavLink to='/home'>Home</NavLink></li>

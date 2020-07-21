@@ -1,8 +1,11 @@
 header {
   background-color: $cl-black;
   border: 1px solid teal;
-  img {
+  img.hdr-main {
     width: 100%;
     height: auto;
+    @media only screen and (max-width: $breakpoint-xs) {
+      display: none;
+    }
   }
 }

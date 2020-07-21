@@ -7,18 +7,26 @@ header {
     overflow: hidden;
     padding: 0px;
     text-align: center;
+    img {
+      display: none;
+      height: auto;
+      width: 70px;
+      @media only screen and (max-width: $breakpoint-xs) {
+        display: block;
+      }
+    }
     .nav-trigger {
-      border: 1px solid red;
       display: none;
       fill: $cl-white;
-      height: 30px;
+      height: 20px;
       position: absolute;
-      right: 17px;
+      right: 10px;
       stroke: $cl-white;
-      top: 17px;
-      width: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
       z-index: 1;
-      @media only screen and (max-width: $breakpoint-sm) {
+      @media only screen and (max-width: $breakpoint-xs) {
         display: block;
       }
     }
@@ -55,19 +63,15 @@ header {
             text-decoration: none;
           }
         }
-        @media only screen and (max-width: $breakpoint-sm) {
-            display: block;
-        }
-      }
-      @media only screen and (max-width: $breakpoint-sm) {
-        background-color: $cl-black;
-        width: 10%;
+
       }
     }
     ul.nav-items {
       margin-right: 15px;
       &.hidden {
-        display: none;
+          @media only screen and (max-width: $breakpoint-xs) {
+            display: none;
+          }  
       }
       li {
         padding-left: 28px;
@@ -84,12 +88,26 @@ header {
           top: 5px;
           width: 16px;
         }
+        @media only screen and (max-width: $breakpoint-xs) {
+            display: block;
+        }
       }
-
+      @media only screen and (max-width: $breakpoint-xs) {
+        background-color: $cl-black;
+        margin: 0;
+        width: 30%;
+      }
     }
-    @media only screen and (max-width: $breakpoint-sm) {
-        height: auto;
-        text-align: left;
+    ul.social-media-icons {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @media only screen and (max-width: $breakpoint-xs) {
+      background: none;
+      height: auto;
+      text-align: left;
     }
   }
 }
