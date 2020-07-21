@@ -30,7 +30,7 @@ export default class SplashPage extends React.Component {
 										</div>
 										<aside className="social">
 											<p>The Official Channels</p>
-											<SocialMediaIcons height={20}/>
+											<SocialMediaIcons />
 										</aside>
 									</figcaption>
 								</figure>

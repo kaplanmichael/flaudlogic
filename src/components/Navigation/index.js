@@ -14,7 +14,6 @@ export default class Navigation extends React.Component {
     }
 
     toggleNav() {
-
       this.setState({
         navOpen: !this.state.navOpen
       });
@@ -33,7 +32,7 @@ export default class Navigation extends React.Component {
                         <li><NavLink to='/press'>Press</NavLink></li>
                         <li><NavLink to='/links'>Links</NavLink></li>
                     </ul>
-                    <SocialMediaIcons height={28}/>
+                    <SocialMediaIcons />
                 </nav>
         );
     }

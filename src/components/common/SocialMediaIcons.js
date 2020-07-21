@@ -9,43 +9,42 @@ import {ReactComponent as IconYouTube} from '../../images/icon_youtube.svg';
 
 export default class SocialMediaIcons extends React.Component {
     render() {
-      const iconHeight = this.props.height || 50;
         return (
           <ul className="social-media-icons">
-              <li style={{height: iconHeight}}>
+              <li>
                 <ReactGA.OutboundLink
                   eventLabel="YouTube Channel"
                   to="http://www.youtube.com/user/FlaudLogic"
                   target="_blank"
                 >
-                  <IconYouTube style={{height: iconHeight}}/>
+                  <IconYouTube/>
                 </ReactGA.OutboundLink>
               </li>
-              <li style={{height: iconHeight}}>
+              <li>
                 <ReactGA.OutboundLink
                   eventLabel="Facebook Page"
                   to="http://www.facebook.com/flaudlogic"
                   target="_blank"
                 >
-                  <IconFacebook style={{height: iconHeight}} />
+                  <IconFacebook />
                 </ReactGA.OutboundLink>
               </li>
-              <li style={{height: iconHeight}}>
+              <li>
                 <ReactGA.OutboundLink
                   eventLabel="Twitter Profile"
                   to="http://twitter.com/flaudlogic"
                   target="_blank"
                 >
-                  <IconTwitter style={{height: iconHeight}} />
+                  <IconTwitter />
                 </ReactGA.OutboundLink>
               </li>
-              <li style={{height: iconHeight}}>
+              <li>
                 <ReactGA.OutboundLink
                   eventLabel="RSS Feed"
                   to="http://news.flaudlogic.com/feeds/posts/default?alt=rss"
                   target="_blank"
                 >
-                  <IconRss style={{height: iconHeight}} />
+                  <IconRss/>
                 </ReactGA.OutboundLink>
               </li>
           </ul>

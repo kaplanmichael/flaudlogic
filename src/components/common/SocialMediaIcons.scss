@@ -6,13 +6,16 @@ ul.social-media-icons {
     padding: 0;
     vertical-align: top;
     li {
-      margin-right: 4%;
       flex: 0 1 auto;
       svg {
         background-color: $cl-ghost;
         border-radius: 20%;
         fill: $cl-river-bed;
+        margin-right: 0.25rem;
         width: auto;
+      }
+      &:last-child svg {
+        margin-right: 0;
       }
     }
 }

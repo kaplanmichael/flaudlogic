@@ -15,6 +15,26 @@ header {
         display: block;
       }
     }
+    ul.social-media-icons {
+        li {
+          height: 28px;
+          @media only screen and (max-width: $breakpoint-xs) {
+            height: 20px;
+          }
+          svg {
+            height: 28px;
+            @media only screen and (max-width: $breakpoint-xs) {
+              height: 20px;
+            }
+          }
+        }
+        @media only screen and (max-width: $breakpoint-xs) {
+          left: 50%;
+          position: absolute;
+          top: 12px;
+          transform: translate(-50%, -50%);
+        }
+    }
     .nav-trigger {
       display: none;
       fill: $cl-white;
@@ -22,8 +42,7 @@ header {
       position: absolute;
       right: 10px;
       stroke: $cl-white;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 14px;
       width: 20px;
       z-index: 1;
       @media only screen and (max-width: $breakpoint-xs) {
@@ -71,7 +90,7 @@ header {
       &.hidden {
           @media only screen and (max-width: $breakpoint-xs) {
             display: none;
-          }  
+          }
       }
       li {
         padding-left: 28px;
@@ -94,20 +113,22 @@ header {
       }
       @media only screen and (max-width: $breakpoint-xs) {
         background-color: $cl-black;
-        margin: 0;
+        margin: 0 0 0 10px;
+        padding-bottom: 20px;
         width: 30%;
       }
     }
-    ul.social-media-icons {
-      left: 50%;
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
+
     @media only screen and (max-width: $breakpoint-xs) {
       background: none;
       height: auto;
       text-align: left;
     }
   }
+  @media only screen and (max-width: $breakpoint-xs) {
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+  }
+
 }

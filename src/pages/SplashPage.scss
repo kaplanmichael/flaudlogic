@@ -39,6 +39,14 @@
 			}
 			aside.social {
 				margin-top: 15px;
+				ul.social-media-icons {
+						li {
+							height: 20px;
+							svg {
+								height: 20px;
+							}
+						}
+				}
 					p {
 						@include fontRender($cl-page-hdr-fill, 400, 'birch-std', 22px, 22px, 2px);
 						display: inline-block;
