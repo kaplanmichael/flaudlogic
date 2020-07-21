@@ -14,7 +14,7 @@ div.column {
   vertical-align: top;
 
   &.left {
-    //border: 1px solid blue;
+    border: 1px solid blue;
     padding: 28px 0px 0px 17px;
     width: 1028px;
     @media only screen and (max-width: $breakpoint-lg) {
@@ -28,7 +28,7 @@ div.column {
     }
   }
   &.right {
-    //border: 1px solid yellow;
+    border: 1px solid yellow;
     padding: 41px 0px 0px 17px;
     width: 337px;
     @media only screen and (max-width: $breakpoint-lg) {
@@ -42,14 +42,3 @@ div.column {
     }
   }
 }
-
-/*
-&.left {
-  width: 796px;
-  padding: 28px 0px 0px 0px;
-}
-&.right {
-  width: 468px;
-  padding: 41px 0px 0px 17px;
-}
-*/
