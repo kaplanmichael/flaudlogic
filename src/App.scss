@@ -92,6 +92,9 @@ a {
 	        transform: scale(1.5,1);
 	        width: 43px;
 	    }
+			@media only screen and (max-width: $breakpoint-xs) {
+				
+			}
 	}
 }
 
