@@ -3,7 +3,7 @@
     font-size: 0;
     margin: 0 auto;
     width: 1400px;
-    @media only screen and (max-width: 1400px) {
+    @media only screen and (max-width: $breakpoint-lg) {
       width: auto;
     }
 
@@ -17,11 +17,11 @@ div.column {
     //border: 1px solid blue;
     padding: 0px 0px 0px 17px;
     width: 1028px;
-    @media only screen and (max-width: 1400px) {
+    @media only screen and (max-width: $breakpoint-lg) {
       padding-left: 17px;
       width: 74%;
     }
-    @media only screen and (max-width: 960px) {
+    @media only screen and (max-width: $breakpoint-md) {
       display: block;
       padding: 0px 10px;
       width: 100%;
@@ -31,11 +31,11 @@ div.column {
     //border: 1px solid yellow;
     padding: 4px 0px 0px 17px;
     width: 337px;
-    @media only screen and (max-width: 1400px) {
+    @media only screen and (max-width: $breakpoint-lg) {
       padding-right: 17px;
       width: 26%;
     }
-    @media only screen and (max-width: 960px) {
+    @media only screen and (max-width: $breakpoint-md) {
       display: block;
       padding: 0px 10px;
       width: 100%;

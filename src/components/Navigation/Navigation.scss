@@ -18,7 +18,7 @@ header {
       top: 17px;
       width: 30px;
       z-index: 1;
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: $breakpoint-sm) {
         display: block;
       }
     }
@@ -55,11 +55,11 @@ header {
             text-decoration: none;
           }
         }
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: $breakpoint-sm) {
             display: block;
         }
       }
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: $breakpoint-sm) {
         background-color: $cl-black;
         width: 10%;
       }
@@ -87,7 +87,7 @@ header {
       }
 
     }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: $breakpoint-sm) {
         height: auto;
         text-align: left;
     }
