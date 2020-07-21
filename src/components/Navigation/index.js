@@ -1,17 +1,29 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import SocialMediaIcons from '../common/SocialMediaIcons';
+import { ReactComponent as HamburgerIcon } from '../../images/hamburger.svg';
 
 export default class Navigation extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            navOpen: false
+        };
+    }
+
+    toggleNav() {
+console.log('test');
+      this.setState({
+        navOpen: !this.state.navOpen
+      });
+    }
+
     render() {
         return (
                 <nav>
-                <svg className="nav-trigger" viewBox="0 0 100 80" width="40" height="40">
-                  <rect width="100" height="10" rx="8"></rect>
-                  <rect y="30" width="100" height="10" rx="8"></rect>
-                  <rect y="60" width="100" height="10" rx="8"></rect>
-                </svg>
-                    <ul className="nav-items">
+                  <HamburgerIcon onClick={() => this.toggleNav()} />
+                    <ul className={`nav-items ${this.state.navOpen ? '' : 'hidden'}`}>
                         <li><NavLink to='/home'>Home</NavLink></li>
                         <li><NavLink to='/blog'>Blog</NavLink></li>
                         <li><NavLink to='/about'>About</NavLink></li>
