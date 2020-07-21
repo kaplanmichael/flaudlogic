@@ -13,7 +13,7 @@ export default class Navigation extends React.Component {
     }
 
     toggleNav() {
-console.log('test');
+
       this.setState({
         navOpen: !this.state.navOpen
       });
