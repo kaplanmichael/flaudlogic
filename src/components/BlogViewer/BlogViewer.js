@@ -73,7 +73,7 @@ const BlogViewerX = () => {
           <article key={item.id}>
               <time><em>{`${grabDate(item.published)} // posted by ${item.author.displayName} @ ${grabTime(item.published)}`}</em></time>
               <h2 dangerouslySetInnerHTML={createMarkup(item.title)}></h2>
-              <div dangerouslySetInnerHTML={createMarkup(item.content)}></div>
+              <p dangerouslySetInnerHTML={createMarkup(item.content)}></p>
               [sharing widget]
           </article>
         ))
