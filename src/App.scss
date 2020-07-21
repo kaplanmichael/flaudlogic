@@ -38,7 +38,7 @@ html {
 		padding: 0;
 }
 body {
-	background: $cl-black url('./images/art_bkgd.jpg') no-repeat 0px 436px scroll;
+	background: $cl-black url('./images/art_bkgd.jpg') no-repeat 0px 0px fixed;
 	background-size: cover;
   @include fontRender($cl-white, 400, 'Open Sans', 15px, 20px, normal);
 	color: $cl-white;
@@ -93,7 +93,7 @@ a {
 	        width: 43px;
 	    }
 			@media only screen and (max-width: $breakpoint-xs) {
-				
+
 			}
 	}
 }
