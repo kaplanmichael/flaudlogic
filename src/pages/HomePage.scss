@@ -1,11 +1,35 @@
 .home-page {
+    width: 1400px;
 	div.column {
 	  &.left {
 	    padding-top: 0px;
+			width: 1060px;
+	    @media only screen and (max-width: $breakpoint-lg) {
+	      padding-left: 17px;
+	      width: 74%;
+	    }
+	    @media only screen and (max-width: $breakpoint-md) {
+	      display: block;
+	      padding: 0px 10px;
+	      width: 100%;
+	    }
 	  }
 	  &.right {
 	   padding-top: 4px;
+		 width: 337px;
+		 @media only screen and (max-width: $breakpoint-lg) {
+		 	padding-right: 17px;
+		 	width: 26%;
+		 }
+		 @media only screen and (max-width: $breakpoint-md) {
+		 	display: block;
+		 	padding: 0px 10px;
+		 	width: 100%;
+		 }
 	  }
+	}
+	@media only screen and (max-width: $breakpoint-lg) {
+		width: auto;
 	}
 
 }

@@ -1,10 +1,11 @@
-#content-container {
-    border: 1px solid green;
+.content-container {
     font-size: 0;
     margin: 0 auto;
-    width: 1400px;
+    width: 980px;
     @media only screen and (max-width: $breakpoint-lg) {
       padding-top: 47px;
+    }
+    @media only screen and (max-width: $breakpoint-sm) {
       width: auto;
     }
 
@@ -15,9 +16,8 @@ div.column {
   vertical-align: top;
 
   &.left {
-    border: 1px solid blue;
     padding: 28px 0px 0px 17px;
-    width: 1028px;
+    width: 640px;
     @media only screen and (max-width: $breakpoint-lg) {
       padding-left: 17px;
       width: 74%;
@@ -29,7 +29,6 @@ div.column {
     }
   }
   &.right {
-    border: 1px solid yellow;
     padding: 41px 0px 0px 17px;
     width: 337px;
     @media only screen and (max-width: $breakpoint-lg) {

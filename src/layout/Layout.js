@@ -14,7 +14,7 @@ export default class Layout extends React.Component {
               <Header>
                   <Navigation />
               </Header>
-              <div id="content-container" className={this.props.pageClass}>
+              <div className={`content-container ${this.props.pageClass}`}>
                   <div className="column left">
                       {this.props.children}
                   </div>
