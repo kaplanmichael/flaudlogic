@@ -5,7 +5,9 @@ export default class ContactPage extends React.Component {
     render() {
         return (
             <Layout>
-                <h1>Contact</h1>
+                <h1>
+                  <em data-text="contact">Contact</em>
+                </h1>
                 <p>-----@-----.---</p>
             </Layout>
         )

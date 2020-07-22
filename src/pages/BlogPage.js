@@ -7,7 +7,9 @@ export default class BlogPage extends React.Component {
     render() {
         return (
             <Layout pageClass="blog-page">
-                <h1>Blog</h1>
+                <h1>
+                  <em data-text="blog">Blog</em>
+                </h1>
                 <BlogViewerX />
             </Layout>
         )

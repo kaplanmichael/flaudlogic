@@ -25,12 +25,12 @@ export default class Navigation extends React.Component {
                   <NavLink to='/home'><img src={MobileLogo} /></NavLink>
                   <HamburgerIcon onClick={() => this.toggleNav()} />
                     <ul className={`nav-items ${this.state.navOpen ? '' : 'hidden'}`}>
-                        <li><NavLink to='/home'>Home</NavLink></li>
-                        <li><NavLink to='/blog'>Blog</NavLink></li>
-                        <li><NavLink to='/about'>About</NavLink></li>
-						            <li><NavLink to='/media'>Media</NavLink></li>
-                        <li><NavLink to='/press'>Press</NavLink></li>
-                        <li><NavLink to='/links'>Links</NavLink></li>
+                        <li><NavLink to='/home' data-text="home">Home</NavLink></li>
+                        <li><NavLink to='/blog' data-text="blog">Blog</NavLink></li>
+                        <li><NavLink to='/about' data-text="about">About</NavLink></li>
+						            <li><NavLink to='/media' data-text="media">Media</NavLink></li>
+                        <li><NavLink to='/press' data-text="press">Press</NavLink></li>
+                        <li><NavLink to='/links' data-text="links">Links</NavLink></li>
                     </ul>
                     <SocialMediaIcons />
                 </nav>

@@ -7,7 +7,9 @@ export default class LinksPage extends React.Component {
         return (
             <Layout>
       				<div className="links-page">
-      					<h1>Links</h1>
+      					<h1>
+                  <em data-text="links">Links</em>
+                </h1>
       					<LinkCluster title="Flaud Logic Social Media Links">
       						<a href="http://www.youtube.com/user/FlaudLogic" title="YouTube Channel">YouTube Channel</a>
       						<a href="http://twitter.com/flaudlogic" title="Twitter">Twitter</a>

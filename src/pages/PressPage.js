@@ -19,7 +19,9 @@ export default class PressPage extends React.Component {
         return (
             <Layout>
       				<section className="press-page">
-      					<h1>Press</h1>
+      					<h1>
+                  <em data-text="press">Press</em>
+                </h1>
                 <h3>Press Kit</h3>
       					<p><a href={pressKit} target="_blank" rel="noopener noreferrer" onClick={()=> {
                   ReactGA.event({

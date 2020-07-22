@@ -13,6 +13,33 @@
     letter-spacing: $letterSpacing;
 }
 
+@mixin stroke($color: $cl-black, $size: 1px) {
+  text-shadow:
+    -#{$size} -#{$size} 0 $color,
+     0        -#{$size} 0 $color,
+     #{$size} -#{$size} 0 $color,
+     #{$size}  0        0 $color,
+     #{$size}  #{$size} 0 $color,
+     0         #{$size} 0 $color,
+    -#{$size}  #{$size} 0 $color,
+    -#{$size}  0        0 $color;
+}
+
+    /* prepare the selectors to add a stroke to */
+  .stroke-single {
+    position: relative;
+    background: transparent;
+    z-index: 0;
+  }
+  /* add a single stroke */
+  .stroke-single:before {
+    content: attr(data-text);
+    position: absolute;
+    -webkit-text-stroke: 0.13em $cl-page-hdr-stroke; /* Chris Coyier's favorite color! */
+    left: 0;
+    z-index: -1;
+  }
+
 @mixin MIXCSSTransform($prop: scale, $x: 1, $y: 1, $originX: 0, $originY: 0){
   -webkit-transform: $prop +'('+ $x +', ' + $y +')';
   -moz-transform: $prop +'('+ $x +', ' + $y +')';

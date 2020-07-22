@@ -130,7 +130,9 @@ export default class AboutPage extends React.Component {
     render() {
         return (
             <Layout pageClass="about-page">
-                <h1>About</h1>
+                <h1>
+                  <em data-text="about">About</em>
+                </h1>
                 <ExpandText>
                     <section>
                     <blockquote>

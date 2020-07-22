@@ -38,7 +38,9 @@ export default class MediaPage extends React.Component {
         return (
             <Layout>
                 <section className="media-page">
-        					<h1>Media</h1>
+        					<h1>
+                    <em data-text="media">Media</em>
+                  </h1>
         					<h2>Discography</h2>
         					<h3>Flaud Logic (Released: 3/31/2013)</h3>
         					<p>Package includes 4-panel full-color digipak, 6-page full-color gatefold with original artwork, song lyrics, and album credits. Click thumbnails below to enlarge.</p>
