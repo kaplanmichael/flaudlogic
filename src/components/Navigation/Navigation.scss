@@ -13,6 +13,9 @@ header {
       width: 70px;
       @media only screen and (max-width: $breakpoint-xs) {
         display: block;
+        left: 8px;
+        position: absolute;
+        top: 0;
       }
     }
     ul.social-media-icons {
@@ -24,14 +27,16 @@ header {
           svg {
             height: 28px;
             @media only screen and (max-width: $breakpoint-xs) {
-              height: 20px;
+              fill: $cl-black;
+              height: 24px;
+              margin-right: 0.6rem;
             }
           }
         }
         @media only screen and (max-width: $breakpoint-xs) {
           left: 50%;
           position: absolute;
-          top: 12px;
+          top: 13px;
           transform: translate(-50%, -50%);
         }
     }
@@ -40,7 +45,7 @@ header {
       fill: $cl-white;
       height: 20px;
       position: absolute;
-      right: 10px;
+      right: 15px;
       stroke: $cl-white;
       top: 14px;
       width: 20px;
@@ -109,13 +114,17 @@ header {
         }
         @media only screen and (max-width: $breakpoint-xs) {
             display: block;
+            margin: 25px 0;
         }
       }
       @media only screen and (max-width: $breakpoint-xs) {
         background-color: $cl-black;
-        margin: 0 0 0 10px;
+        margin: 0;
         padding-bottom: 20px;
-        width: 30%;
+        width: 70%;
+        position: absolute;
+        padding-left: 10px;
+        top: 47px;
       }
     }
 
