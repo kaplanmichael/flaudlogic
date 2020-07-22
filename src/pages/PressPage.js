@@ -5,6 +5,7 @@ import DynamicImageGrid from '../components/DynamicImageGrid';
 import pressKit from '../media/fl_press_kit.pdf';
 import pressRelease from '../media/press_20130117_romeo.pdf';
 import ReactGA from 'react-ga';
+import { MainPageHeader } from '../components/common/MainPageHeader';
 
 const press = {};
 
@@ -19,9 +20,7 @@ export default class PressPage extends React.Component {
         return (
             <Layout>
       				<section className="press-page">
-      					<h1>
-                  <em data-text="press">Press</em>
-                </h1>
+                <MainPageHeader text="press" />
                 <h3>Press Kit</h3>
       					<p><a href={pressKit} target="_blank" rel="noopener noreferrer" onClick={()=> {
                   ReactGA.event({

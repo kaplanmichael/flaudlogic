@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../layout/Layout';
 import DynamicImageGrid from '../components/DynamicImageGrid';
 import ReactGA from 'react-ga';
+import { MainPageHeader } from '../components/common/MainPageHeader';
 import se_1_mp3 from '../media/audio/se_1.mp3';
 import se_1_ogg from '../media/audio/se_1.ogg';
 import se_1_wav from '../media/audio/se_1.wav';
@@ -38,9 +39,7 @@ export default class MediaPage extends React.Component {
         return (
             <Layout>
                 <section className="media-page">
-        					<h1>
-                    <em data-text="media">Media</em>
-                  </h1>
+                  <MainPageHeader text="media" />
         					<h2>Discography</h2>
         					<h3>Flaud Logic (Released: 3/31/2013)</h3>
         					<p>Package includes 4-panel full-color digipak, 6-page full-color gatefold with original artwork, song lyrics, and album credits. Click thumbnails below to enlarge.</p>

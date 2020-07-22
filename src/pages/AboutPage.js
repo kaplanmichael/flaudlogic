@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../layout/Layout';
 import ExpandText from '../components/ExpandText';
 import MemberCard from '../components/MemberCard';
+import { MainPageHeader } from '../components/common/MainPageHeader';
 
 const MEMBERS = [
     {
@@ -130,9 +131,7 @@ export default class AboutPage extends React.Component {
     render() {
         return (
             <Layout pageClass="about-page">
-                <h1>
-                  <em data-text="about">About</em>
-                </h1>
+                <MainPageHeader text="about" />
                 <ExpandText>
                     <section>
                     <blockquote>

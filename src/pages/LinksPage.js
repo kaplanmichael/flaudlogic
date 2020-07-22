@@ -1,15 +1,14 @@
 import React from 'react';
 import Layout from '../layout/Layout';
 import LinkCluster from '../components/LinkCluster';
+import { MainPageHeader } from '../components/common/MainPageHeader';
 
 export default class LinksPage extends React.Component {
     render() {
         return (
             <Layout>
       				<div className="links-page">
-      					<h1>
-                  <em data-text="links">Links</em>
-                </h1>
+      					<MainPageHeader text="links" />
       					<LinkCluster title="Flaud Logic Social Media Links">
       						<a href="http://www.youtube.com/user/FlaudLogic" title="YouTube Channel">YouTube Channel</a>
       						<a href="http://twitter.com/flaudlogic" title="Twitter">Twitter</a>
