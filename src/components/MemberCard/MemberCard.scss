@@ -1,5 +1,3 @@
-//@import '../../less/colors';
-
 .member-card {
     background-color: $cl-shark;
     border-radius: 7px;
@@ -22,10 +20,20 @@
           color: $cl-page-hdr-fill;
           display: block;
           margin-bottom: 5px;
+          @media only screen and (max-width: $breakpoint-xs) {
+              font-size: 18px;
+              margin-bottom: 10px;
+          }
       }
       em {
           display: block;
       }
+      @media only screen and (max-width: $breakpoint-xs) {
+          display: inline-block;
+          padding-left: 15px;
+          vertical-align: top;
+          width: 75%;
+    	}
     }
     img {
         -webkit-filter: sepia(1);
@@ -37,7 +45,11 @@
         position: relative;
         width: 100px;
         height: 100px;
-        z-index: 1;
+        @media only screen and (max-width: $breakpoint-xs) {
+            height: 25%;
+            margin: 0;
+            width: 25%;
+      	}
     }
     &:hover:after {
       animation: shine 3s ease-out;
@@ -61,8 +73,13 @@
         rgba(255, 255, 255, 0.0) 100%
       );
     }
+    @media only screen and (max-width: $breakpoint-xs) {
+        height: auto;
+        text-align: left;
+        width: 100%;
+    }
 }
-@keyframes shine{
+@keyframes shine {
   10% {
     opacity: 1;
     top: -30%;
