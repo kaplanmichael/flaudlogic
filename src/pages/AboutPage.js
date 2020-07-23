@@ -113,7 +113,7 @@ const MEMBERS = [
     {
         "name": "Eric Kvortek",
         "role": "Engineer - Percussion",
-        "bio": "<p>An engineer with over 20 years experience, Eric currently works at the Legendary Trax East recording studio in New Brunswick, NJ, where bands such as <em>Symphony X</em>, <em>Dillinger Escape Plan</em>, <em>Mindfunk</em>, <em>Atreyu</em>, <em>Hatebreed</em>, <em>Phantom's Opera</em> have recorded. Eric has worked with and recorded over 300 bands including <em>God Forbid</em>, <em>Black Daliah Murder</em>, <em>The Red Chord</em>, <em>Dead To Fall</em>, <em>Zao</em>, <em>Twelve Tribes</em>, <em>Sinai Beach</em>, <em>Full Blown Chaos</em>, <em>Looking Forward</em>, <em>Nora</em>, <em>Human Abstract</em>, <em>The Banner</em>, <em>War of Ages</em>, <em>Spitfire</em>, <em>Anchors For Arms</em>, <em>Symphony in Peril</em>, <em>Don the Reader</em>, <em>Death Star</em>, <em>Atomic Bitchwax</em>, <em>Solace</em>, <em>Mush Mouth</em>, <em>The Fins</em>, <em>Break Away</em>, <em>A Life Once Lost</em>, <em>Overlorde</em>, <em>The Noviach</em>, <em>Drive Faster</em>, <em>Delian League</em>, <em>Operatika</em>, <em>Trash Maverics</em>, <em>Annunaki</em>, <em>Last Perfection</em>, <em>Geoff Baker</em>, <em>The Bitter Life Typecast</em>, <em>Sekond Skyn</em>, <em>Love Gas</em>, and <em>Normaljoy</em>.</p>",
+        "bio": "<p>An engineer with over 20 years experience, Eric currently works at the Legendary Trax East recording studio in New Brunswick, NJ, where bands such as <em>Symphony X</em>, <em>Dillinger Escape Plan</em>, <em>Mindfunk</em>, <em>Atreyu</em>, <em>Hatebreed</em>, <em>Phantom's Opera</em> have recorded. Eric has worked with and recorded over 300 bands including <em>God Forbid</em>, <em>Black Daliah Murder</em>, <em>The Red Chord</em>, <em>Dead To Fall</em>, <em>Zao</em>, <em>Twelve Tribes</em>, <em>Sinai Beach</em>, <em>Full Blown Chaos</em>, <em>Looking Forward</em>, <em>Nora</em>, <em>Human Abstract</em>, <em>The Banner</em>, <em>War of Ages</em>, <em>Spitfire</em>, <em>Anchors For Arms</em>, <em>Symphony in Peril</em>, <em>Don the Reader</em>, <em>Death Star</em>, <em>Atomic Bitchwax</em>, <em>Solace</em>, <em>Mush Mouth</em>, <em>The Fins</em>, <em>Break Away</em>, <em>A Life Once Lost</em>, <em>Overlorde</em>, <em>The Noviach</em>, <em>Drive Faster</em>, <em>Delian League</em>, <em>Operatika</em>, <em>Trash Maverics</em>, <em>Annunaki</em>, <em>Last Perfection</em>, <em>Geoff Baker</em>, <em>The Bitter Life Typecast</em>, <em>Sekond Skyn</em>, <em>Love Gas</em>, and <em>Normaljoy</em>.</p><p>R.I.P. Eric.  You are surely missed!",
         "thumburl": require(`../images/fl_cast_ekvortek.jpg`),
         "imageurl": require(`../images/fl_cast_ekvortek.jpg`)
     },
@@ -158,9 +158,11 @@ export default class AboutPage extends React.Component {
                 </ExpandText>
                 <h2>Cast</h2>
                 <p>Click for bios.</p>
-                {MEMBERS.map((item, i) =>
-                    <MemberCard member={item} key={i}/>
-                )}
+                <section className="grid">
+                  {MEMBERS.map((item, i) =>
+                      <MemberCard member={item} key={i}/>
+                  )}
+                </section>
             </Layout>
         )
     }
