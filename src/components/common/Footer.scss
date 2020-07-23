@@ -15,49 +15,40 @@ footer {
         display: inline-block;
         height: 27px;
         margin-right: 20px;
-        margin-top: 9px;
+        margin-top: 14px;
         position: relative;
         vertical-align: top;
+        width: auto;
         a {
-          @include MIXCSSTransform(scale, 0.51, 1.0, 0, 0);
-          -webkit-text-stroke-width: 1.5px;
-          -webkit-text-stroke-color: $cl-page-hdr-stroke;
+          background: transparent;
           color: $cl-page-hdr-fill;
           display: inline-block;
-          font-family: 'Amiri';
-          font-size: 30px;
-          font-weight: 700;
-          height: 27px;
-          letter-spacing: 7px;
-          line-height: 33px;
+          font-family: birch-std, serif;
+          font-size: 20px;
+          font-weight: 400;
+          letter-spacing: 5px;
+          line-height: 20px;
+          position: relative;
           text-decoration: none;
           text-transform: uppercase;
+          z-index: 0;
           &.active {
             color: $cl-nav-active-fill;
           }
+          &:hover {
+            color: $cl-nav-active-fill;
+            text-decoration: none;
+          }
+          &:before {
+            content: attr(data-text);
+            position: absolute;
+            -webkit-text-stroke: 0.13em $cl-page-hdr-stroke; /* Chris Coyier's favorite color! */
+            left: 0;
+            z-index: -1;
+          }
 
         }
-        &.home {
-          width: 60px;
-        }
-        &.blog {
-          width: 54px;
-        }
-        &.about {
-          width: 68px;
-        }
-        &.media {
-          width: 68px;
-        }
-        &.contact {
-          width: 133px;
-        }
-        &.press {
-          width: 63px;
-        }
-        &.links {
-          width: 60px;
-        }
+
       }
     }
   }

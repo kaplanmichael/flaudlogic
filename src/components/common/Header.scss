@@ -1,8 +1,9 @@
 header {
   background-color: $cl-black;
   img.hdr-main {
-    width: 100%;
+    display: block;
     height: auto;
+    width: 100%;
     @media only screen and (max-width: $breakpoint-xs) {
       display: none;
     }

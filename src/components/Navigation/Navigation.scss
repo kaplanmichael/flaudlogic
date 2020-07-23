@@ -1,8 +1,8 @@
 header {
   position: relative;
   nav {
-    background: $cl-black url('../../images/art_nav_bkgd.gif') no-repeat scroll center top;
-    height: 48px;
+    background: $cl-black url('../../images/art_nav_bkgd.gif') no-repeat scroll center -4px;
+    height: 44px;
     margin: 0;
     overflow: hidden;
     padding: 0px;
@@ -62,14 +62,12 @@ header {
       li {
         display: inline-block;
         height: 27px;
-        margin-top: 12px;
+        margin-top: 9px;
         position: relative;
         vertical-align: top;
         width: auto;
         a {
-          position: relative;
           background: transparent;
-          z-index: 0;
           color: $cl-page-hdr-fill;
           display: inline-block;
           font-family: birch-std, serif;
@@ -77,9 +75,10 @@ header {
           font-weight: 400;
           letter-spacing: 7px;
           line-height: 30px;
+          position: relative;
           text-decoration: none;
           text-transform: uppercase;
-
+          z-index: 0;
           &.active {
             color: $cl-nav-active-fill;
           }
@@ -92,7 +91,7 @@ header {
             position: absolute;
             -webkit-text-stroke: 0.13em $cl-page-hdr-stroke; /* Chris Coyier's favorite color! */
             left: 0;
-            z-index: -1;  
+            z-index: -1;
           }
         }
 
