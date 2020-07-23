@@ -11,7 +11,7 @@ header {
       display: none;
       height: auto;
       width: 70px;
-      @media only screen and (max-width: $breakpoint-xs) {
+      @media only screen and (max-width: $breakpoint-sm) {
         display: block;
         left: 8px;
         position: absolute;
@@ -21,19 +21,19 @@ header {
     ul.social-media-icons {
         li {
           height: 28px;
-          @media only screen and (max-width: $breakpoint-xs) {
+          @media only screen and (max-width: $breakpoint-sm) {
             height: 20px;
           }
           svg {
             height: 28px;
-            @media only screen and (max-width: $breakpoint-xs) {
+            @media only screen and (max-width: $breakpoint-sm) {
               fill: $cl-black;
               height: 24px;
               margin-right: 0.6rem;
             }
           }
         }
-        @media only screen and (max-width: $breakpoint-xs) {
+        @media only screen and (max-width: $breakpoint-sm) {
           left: 50%;
           position: absolute;
           top: 13px;
@@ -50,7 +50,7 @@ header {
       top: 14px;
       width: 20px;
       z-index: 1;
-      @media only screen and (max-width: $breakpoint-xs) {
+      @media only screen and (max-width: $breakpoint-sm) {
         display: block;
       }
     }
@@ -100,7 +100,7 @@ header {
     ul.nav-items {
       margin-right: 15px;
       &.hidden {
-          @media only screen and (max-width: $breakpoint-xs) {
+          @media only screen and (max-width: $breakpoint-sm) {
             display: none;
           }
       }
@@ -119,12 +119,12 @@ header {
           top: 5px;
           width: 16px;
         }
-        @media only screen and (max-width: $breakpoint-xs) {
+        @media only screen and (max-width: $breakpoint-sm) {
             display: block;
             margin: 25px 0;
         }
       }
-      @media only screen and (max-width: $breakpoint-xs) {
+      @media only screen and (max-width: $breakpoint-sm) {
         background-color: $cl-black;
         margin: 0;
         padding-bottom: 20px;
@@ -135,13 +135,13 @@ header {
       }
     }
 
-    @media only screen and (max-width: $breakpoint-xs) {
+    @media only screen and (max-width: $breakpoint-sm) {
       background: none;
       height: auto;
       text-align: left;
     }
   }
-  @media only screen and (max-width: $breakpoint-xs) {
+  @media only screen and (max-width: $breakpoint-sm) {
       position: fixed;
       width: 100%;
       z-index: 1;

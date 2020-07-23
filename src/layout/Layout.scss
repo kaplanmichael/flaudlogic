@@ -2,8 +2,11 @@
     font-size: 0;
     margin: 0 auto;
     width: 980px;
+    @media only screen and (max-width: $breakpoint-md) {
+      width: 100%;
+  	}
     @media only screen and (max-width: $breakpoint-sm) {
-      padding-top: 47px;
+      padding-top: 70px;
       width: auto;
     }
 
@@ -16,27 +19,29 @@ div.column {
   &.left {
     padding: 28px 0px 0px 17px;
     width: 640px;
-    @media only screen and (max-width: $breakpoint-lg) {
-      padding-left: 17px;
-      width: 74%;
-    }
     @media only screen and (max-width: $breakpoint-md) {
+      padding-left: 17px;
+      width: 70%;
+    }
+    @media only screen and (max-width: $breakpoint-sm) {
       display: block;
       padding: 0px 10px;
       width: 100%;
     }
+
   }
   &.right {
     padding: 41px 0px 0px 17px;
     width: 337px;
-    @media only screen and (max-width: $breakpoint-lg) {
-      padding-right: 17px;
-      width: 26%;
-    }
     @media only screen and (max-width: $breakpoint-md) {
+      padding-right: 17px;
+      width: 30%;
+    }
+    @media only screen and (max-width: $breakpoint-sm) {
       display: block;
       padding: 0px 10px;
       width: 100%;
     }
+
   }
 }
