@@ -1,7 +1,12 @@
 .links-page {
 	.link-container {
-	    float: left;
+		@include fontRender($cl-white, 400, 'Open Sans', 15px, 20px, normal);
+		display: inline-block;
+		padding-right: 15px;
 		vertical-align: top;
-		width: 328px;
+		width: 50%;
+		@media only screen and (max-width: $breakpoint-xs) {
+				width: 100%;
+		}
 	}
 }

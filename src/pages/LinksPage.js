@@ -6,8 +6,7 @@ import { MainPageHeader } from '../components/common/MainPageHeader';
 export default class LinksPage extends React.Component {
     render() {
         return (
-            <Layout>
-      				<div className="links-page">
+            <Layout pageClass="links-page">
       					<MainPageHeader text="links" />
       					<LinkCluster title="Flaud Logic Social Media Links">
       						<a href="http://www.youtube.com/user/FlaudLogic" title="YouTube Channel">YouTube Channel</a>
@@ -34,7 +33,6 @@ export default class LinksPage extends React.Component {
       						<a href="http://www.progpalaceradio.com" target="_blank" rel="noopener noreferrer">Prog Palace Radio</a>
       						<a href="http://www.progrock.com" target="_blank" rel="noopener noreferrer">Progrock.com Radio</a>
       					</LinkCluster>
-      				</div>
             </Layout>
         )
     }
