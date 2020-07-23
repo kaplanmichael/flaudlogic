@@ -95,25 +95,29 @@ h3 {
 }
 
 .copyright {
+	@include fontRender($cl-gray, 700, $serif-font-stack, 10px, 20px, normal);
+	display: block;
+	padding: 0 10px;
 	text-align: center;
-	font: normal 10px "Times New Roman", Times, serif;
-	color: $cl-gray;
 	text-transform: uppercase;
-	a:link {
-		font: normal 10px "Times New Roman", Times, serif;
-		color: $cl-gray;
-		text-decoration: underline;
+	p {
+		@include fontRender($cl-gray, 700, $serif-font-stack, 10px, 20px, normal);
+		margin: 0 0 6px 0;
+		a {
+			display: inline;
+		}
 	}
-	a:hover {
-		font: normal 10px "Times New Roman", Times, serif;
-		color: $cl-gray;
-		text-decoration: none;
+	a {
+		@include fontRender($cl-gray, 700, $serif-font-stack, 10px, 10px, normal);
+		display: block;
+		&:link, &:visited {
+			text-decoration: underline;
+		}
+		&:hover {
+			text-decoration: none;
+		}
 	}
-	a:visited {
-		font: normal 10px "Times New Roman", Times, serif;
-		color: $cl-gray;
-		text-decoration: underline;
-	}
+
 }
 
 input[type="text"], textarea {

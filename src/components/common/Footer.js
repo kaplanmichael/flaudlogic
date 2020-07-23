@@ -16,8 +16,8 @@ export default class Footer extends React.Component {
                         <li><NavLink to='/links' data-text="links">Links</NavLink></li>
                     </ul>
                 </nav>
-              <span className="copyright">
-                Reproduction of material from any flaudlogic.com page without written permission from the author is strictly prohibited.<br />
+              <section className="copyright">
+                <p>Reproduction of material from any flaudlogic.com page without written permission from the author is strictly prohibited.<br />
                 ©2020 Copyright Michael D. Kaplan. All rights reserved.  Website layout by &nbsp;
                 <ReactGA.OutboundLink
                   eventLabel="Gustavo Sazes"
@@ -26,9 +26,9 @@ export default class Footer extends React.Component {
                 >
                   Gustavo Sazes
                 </ReactGA.OutboundLink>
-                . <br />
+                . </p>
                   <Link to="/contact">Contact</Link>
-              </span>
+              </section>
             </footer>
         );
     }
