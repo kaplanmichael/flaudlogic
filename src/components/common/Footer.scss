@@ -46,7 +46,7 @@ footer {
             left: 0;
             z-index: -1;
           }
-          @media only screen and (max-width: $breakpoint-sm) {
+          @media only screen and (max-width: $breakpoint-xs) {
             font-size: 15px;
             letter-spacing: 4px;
           }
@@ -54,7 +54,7 @@ footer {
         &:last-child {
           margin-right: 0px;
         }
-        @media only screen and (max-width: $breakpoint-sm) {
+        @media only screen and (max-width: $breakpoint-xs) {
           margin-right: 11px;
         }
       }
