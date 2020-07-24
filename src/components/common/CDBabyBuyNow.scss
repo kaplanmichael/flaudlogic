@@ -19,19 +19,46 @@
       transform: translateY(-50%);
       button {
         width: 100%;
+        @media only screen and (max-width: $breakpoint-md) {
+          margin-right: 0;
+          width: 80%;
+        }
       }
       h2 {
         @include fontRender($cl-ghost, 400, 'birch-std', 33px, normal, 0.35rem);
         margin-right: -0.35rem;
+      }
+      @media only screen and (max-width: $breakpoint-md) {
+        left: auto;
+        margin-top: 5px;
+        position: relative;
+        top: auto;
+        transform: none;
       }
     }
     img {
       position: absolute;
       right: 20px;
       top: 9px;
+      @media only screen and (max-width: $breakpoint-md) {
+        display: inline-block;
+        position: relative;
+        right: auto;
+      }
+    }
+    @media only screen and (max-width: $breakpoint-md) {
+      padding: 0;
+      text-align: center;
     }
   }
-  @media only screen and (max-width: $breakpoint-lg) {
+  @media only screen and (max-width: $breakpoint-md) {
+    height: auto;
     width: 100%;
+  }
+  @media only screen and (max-width: $breakpoint-sm) {
+    max-width: 320px;
+  }
+  @media only screen and (max-width: $breakpoint-xs) {
+    max-width: none;
   }
 }
