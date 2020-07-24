@@ -13,9 +13,10 @@ header {
       width: 70px;
       @media only screen and (max-width: $breakpoint-sm) {
         display: block;
-        left: 8px;
+        left: 50%;
         position: absolute;
         top: 0;
+        transform: translateX(-50%);
       }
     }
     ul.social-media-icons {
@@ -28,16 +29,15 @@ header {
             height: 28px;
             @media only screen and (max-width: $breakpoint-sm) {
               fill: $cl-black;
-              height: 24px;
-              margin-right: 0.6rem;
+              height: 20px;
+              margin-right: 0.7rem;
             }
           }
         }
         @media only screen and (max-width: $breakpoint-sm) {
-          left: 50%;
+          right: 10px;
           position: absolute;
-          top: 13px;
-          transform: translate(-50%, -50%);
+          top: 2px;
         }
     }
     .nav-trigger {
@@ -45,7 +45,7 @@ header {
       fill: $cl-white;
       height: 20px;
       position: absolute;
-      right: 15px;
+      left: 10px;
       stroke: $cl-white;
       top: 14px;
       width: 20px;
