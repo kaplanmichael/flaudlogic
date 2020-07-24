@@ -42,7 +42,7 @@ footer {
           &:before {
             content: attr(data-text);
             position: absolute;
-            -webkit-text-stroke: 0.13em $cl-page-hdr-stroke; /* Chris Coyier's favorite color! */
+            -webkit-text-stroke: 0.13em $cl-page-hdr-stroke;
             left: 0;
             z-index: -1;
           }

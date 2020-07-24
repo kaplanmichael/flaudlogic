@@ -97,13 +97,13 @@ h3 {
 }
 
 .copyright {
-	@include fontRender($cl-gray, 700, $serif-font-stack, 10px, 20px, normal);
+	@include fontRender($cl-gray, 700, $serif-font-stack, 10px, 13px, normal);
 	display: block;
 	padding: 0 10px;
 	text-align: center;
 	text-transform: uppercase;
 	p {
-		@include fontRender($cl-gray, 700, $serif-font-stack, 10px, 20px, normal);
+		@include fontRender($cl-gray, 700, $serif-font-stack, 10px, 13px, normal);
 		margin: 0 0 6px 0;
 		a {
 			display: inline;
