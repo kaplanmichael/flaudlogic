@@ -19,7 +19,6 @@ export default class Layout extends React.Component {
                       {this.props.children}
                   </div>
                   {this.props.hasSidebar ? <div className="column right"><CDBabyBuyNow /><TwitterTimeline /></div> : ''}
-                  <div style={{clear: 'both'}}/>
               </div>
               <Footer />
             </>
