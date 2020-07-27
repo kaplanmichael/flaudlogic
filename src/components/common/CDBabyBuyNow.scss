@@ -54,8 +54,6 @@
   @media only screen and (max-width: $breakpoint-md) {
     height: auto;
     width: 100%;
-  }
-  @media only screen and (max-width: $breakpoint-sm) {
     max-width: 320px;
   }
   @media only screen and (max-width: $breakpoint-xs) {
