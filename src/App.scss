@@ -17,6 +17,7 @@
 @import './components/MemberCard/MemberCard';
 @import './components/Navigation/Navigation';
 @import './components/DynamicImageGrid/DynamicImageGrid';
+@import './components/HomeCarousel/HomeCarousel';
 
 //layout
 @import './layout/Layout';
@@ -149,16 +150,4 @@ button {
 }
 .showMe {
 	display: inline;
-}
-
-//HomeCarousel
-.slick-slider .slick-track, .slick-slider .slick-list {
-	height: 400px;
-	margin: 2px 0px 10px 0px;
-}
-.slick-slide {
-	img {
-		height: 100%;
-		width: auto;
-	}
 }
