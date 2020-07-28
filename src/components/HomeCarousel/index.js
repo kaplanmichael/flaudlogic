@@ -11,7 +11,7 @@ importAll(require.context("../../images/gallery/trax_east", false, /\.(gif|jpg|p
 
 export default class HomeCarousel extends React.Component {
 
-shuffle(arr) {
+  shuffle(arr) {
     let i = arr.length, j, temp;
     while(--i > 0){
       j = Math.floor(Math.random()*(i+1));

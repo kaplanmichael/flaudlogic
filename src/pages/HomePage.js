@@ -4,6 +4,7 @@ import { TwoCol } from '../components/TwoCol';
 import { BlogViewerX } from '../components/BlogViewer/BlogViewer';
 import HomeCarousel from '../components/HomeCarousel';
 import { VideoPlayer } from '../components/VideoPlayer';
+import { LatestNews } from '../components/LatestNews';
 
 export default class HomePage extends React.Component {
     render() {
@@ -20,6 +21,7 @@ export default class HomePage extends React.Component {
                   right={
                     <>
                       <h2>Latest News</h2>
+                      <LatestNews />
                     </>
                   }
                 />
