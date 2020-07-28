@@ -11,6 +11,16 @@ importAll(require.context("../../images/gallery/trax_east", false, /\.(gif|jpg|p
 
 export default class HomeCarousel extends React.Component {
 
+shuffle(arr) {
+    let i = arr.length, j, temp;
+    while(--i > 0){
+      j = Math.floor(Math.random()*(i+1));
+      temp = arr[j];
+      arr[j] = arr[i];
+      arr[i] = temp;
+    }
+  }
+
   render() {
         const settings = {
          adaptiveHeight: true,
@@ -28,15 +38,17 @@ export default class HomeCarousel extends React.Component {
         return (
           <>
             <Slider {...settings}>
-            {Object.keys(mktg).map((key, index) => {
-                images.push(mktg[key]);
-                return (
-                  <div key={index}>
-                       <img onClick={() => this.setState({isOpen:true, photoIndex: index})} src={mktg[key]} alt=""/>
-                  </div>
-                )
-
-            })}
+              {Object.keys(mktg).map((key, index) => {
+                  images.push(mktg[key]);
+              })}
+              {this.shuffle(images)}
+              {images.map((image, index) => {
+                  return (
+                    <div key={index}>
+                         <img onClick={() => this.setState({isOpen:true, photoIndex: index})} src={image} alt=""/>
+                    </div>
+                  )
+              })}
             </Slider>
           </>
         );
