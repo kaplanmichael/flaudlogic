@@ -1,0 +1,7 @@
+.comp-twitter-timeline {
+  iframe {
+    @media only screen and (max-width: $breakpoint-xs) {
+        width: 100% !important;
+    }
+  }
+}
