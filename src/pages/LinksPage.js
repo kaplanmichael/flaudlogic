@@ -15,7 +15,8 @@ export default class LinksPage extends React.Component {
       						<a href="http://news.flaudlogic.com/feeds/posts/default?alt=rss" target="_blank" rel="noopener noreferrer" title="RSS">RSS Feed</a>
       					</LinkCluster>
       					<LinkCluster title="Flaud Logic Contributors">
-      						<a href="http://www.bennylackner.com/" target="_blank" rel="noopener noreferrer">Benny Lackner</a>
+                  <a href="http://creative.michaelkaplan.net/" target="_blank" rel="noopener noreferrer">Benny Lackner</a>
+                  <a href="http://www.bennylackner.com/" target="_blank" rel="noopener noreferrer">Benny Lackner</a>
       						<a href="http://www.amyward.com/" target="_blank" rel="noopener noreferrer">Amy Ward</a>
       						<a href="http://www.joebergamini.com/" target="_blank" rel="noopener noreferrer">Joe Bergamini</a>
       						<a href="http://www.scottthomasf.com/" target="_blank" rel="noopener noreferrer">Scott Thomas Ferreira</a>
