@@ -23,7 +23,6 @@ export default class HomeCarousel extends React.Component {
 
   render() {
         const settings = {
-         adaptiveHeight: true,
          arrows: false,
          autoplay: true,
          autoplaySpeed: 7500,
