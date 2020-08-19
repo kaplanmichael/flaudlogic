@@ -9,6 +9,6 @@ header {
     }
   }
   @media only screen and (max-width: $breakpoint-sm) {
-    height: 47px;
+    height: $mobile-header-height;
   }
 }
