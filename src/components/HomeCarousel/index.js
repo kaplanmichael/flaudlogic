@@ -46,6 +46,7 @@ export default class HomeCarousel extends React.Component {
                   return (
                     <div key={index}>
                          <img onClick={() => this.setState({isOpen:true, photoIndex: index})} src={image} alt=""/>
+                         <img src={image} alt=""/>
                     </div>
                   )
               })}
