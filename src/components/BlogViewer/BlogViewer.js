@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { BlogNav } from './BlogNav';
 
-const BlogViewerX = () => {
+const BlogViewer = () => {
+  const pageSize = 20;
   const [data, setData] = useState([]);
   const [pagePos, setPagePos] = useState(0);
   const [pageTokens, setPageTokens] = useState(['']);
-  const [apiUrl, setApiUrl] = useState('https://www.googleapis.com/blogger/v3/blogs/2726861849607401146/posts?key=AIzaSyCgg1t9I1o3nz8OG1En1Bbqt8I-vF18LvU');
+  const [apiUrl, setApiUrl] = useState(`https://www.googleapis.com/blogger/v3/blogs/2726861849607401146/posts?key=AIzaSyCgg1t9I1o3nz8OG1En1Bbqt8I-vF18LvU&maxResults=${pageSize}`);
 
   const createMarkup = (content) => {
       return {__html: content}
@@ -67,7 +68,7 @@ const BlogViewerX = () => {
 
   return (
     <section className="blog-viewer">
-      <BlogNav {...{pageTokens, pagePos, setPagePos, data}} />
+      <BlogNav {...{pageTokens, pagePos, setPagePos, data, pageSize}} />
       {data.items &&
         data.items.map(item => (
           <article key={item.id}>
@@ -78,9 +79,9 @@ const BlogViewerX = () => {
           </article>
         ))
       }
-      <BlogNav {...{pageTokens, pagePos, setPagePos, data}} />
+      <BlogNav {...{pageTokens, pagePos, setPagePos, data, pageSize}} />
     </section>
   )
 }
 
-export { BlogViewerX };
+export { BlogViewer };

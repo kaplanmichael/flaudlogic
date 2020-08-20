@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactGA from 'react-ga';
-const BlogNav = ({pageTokens, pagePos, setPagePos, data}) => {
-
+const BlogNav = ({pageTokens, pagePos, setPagePos, data, pageSize}) => {
 const showPrevButton = pageTokens[pagePos - 1] || pageTokens[pagePos - 1] === "";
-const showNextButton = data.items && data.items.length === 10;
+const showNextButton = data.items && data.items.length === pageSize;
   return (
     <section className="blog-nav">
           <button disabled={!showPrevButton} onClick={
