@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactGA from 'react-ga';
 
-const targetURL = 'https://play.google.com/store/music/album/Flaud_Logic_Flaud_Logic?id=Bsxa5vsbjhxgjfos6yihjncwim4&hl=en_US';
+const targetURL = 'https://www.amazon.com/Flaud-Logic/dp/B00C5JHBH4/ref=tmm_acd_swatch_0?_encoding=UTF8&qid=1612380217&sr=8-1';
 export default class CDBabyBuyNow extends React.Component {
 	handleClick = () => {
 		ReactGA.event({
