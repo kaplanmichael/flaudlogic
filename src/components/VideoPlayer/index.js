@@ -1,21 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import ReactPlayer from 'react-player/youtube';
+import React, { useState, useEffect } from "react";
+import ReactPlayer from "react-player/youtube";
 
 const VideoPlayer = (props) => {
   const componentWrapperStyles = {
-    position: 'relative',
-    paddingTop: '56.25%'
-  }
+    position: "relative",
+    paddingTop: "56.25%",
+  };
   const playerStyles = {
-    position: 'absolute',
+    position: "absolute",
     top: 0,
-    left: 0
-  }
+    left: 0,
+  };
   return (
     <section className="video-player" style={componentWrapperStyles}>
-      <ReactPlayer url='https://youtu.be/vpTuSpUboxY' width='100%' height='100%' style={playerStyles} />
+      <ReactPlayer
+        url="https://youtu.be/_IwzQCHh6ak"
+        width="100%"
+        height="100%"
+        style={playerStyles}
+      />
     </section>
-  )
-}
+  );
+};
 
 export { VideoPlayer };
