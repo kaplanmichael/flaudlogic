@@ -1,155 +1,156 @@
-
 //global
-@import './scss/colors';
-@import './scss/fonts';
-@import './scss/mixins';
-@import './scss/variables';
+@import "./scss/colors";
+@import "./scss/fonts";
+@import "./scss/mixins";
+@import "./scss/variables";
 
 //components
-@import './components/BioModal/BioModal';
-@import './components/BlogViewer/BlogNav';
-@import './components/BlogViewer/BlogViewer';
-@import './components/common/Footer';
-@import './components/common/SocialMediaIcons';
-@import './components/common/CDBabyBuyNow';
-@import './components/common/TwitterTimeline';
-@import './components/common/Header';
-@import './components/common/MainPageHeader';
-@import './components/MemberCard/MemberCard';
-@import './components/Navigation/Navigation';
-@import './components/DynamicImageGrid/DynamicImageGrid';
-@import './components/HomeCarousel/HomeCarousel';
-@import './components/TwoCol/TwoCol';
+@import "./components/BioModal/BioModal";
+@import "./components/BlogViewer/BlogNav";
+@import "./components/BlogViewer/BlogViewer";
+@import "./components/common/Footer";
+@import "./components/common/SocialMediaIcons";
+@import "./components/common/CDBabyBuyNow";
+@import "./components/common/TwitterTimeline";
+@import "./components/common/Header";
+@import "./components/common/MainPageHeader";
+@import "./components/MemberCard/MemberCard";
+@import "./components/Navigation/Navigation";
+@import "./components/DynamicImageGrid/DynamicImageGrid";
+@import "./components/HomeCarousel/HomeCarousel";
+@import "./components/TwoCol/TwoCol";
 
 //layout
-@import './layout/Layout';
-@import './layout/SplashLayout';
+@import "./layout/Layout";
+@import "./layout/SplashLayout";
 
 //pages
-@import './pages/MediaPage';
-@import './pages/PressPage';
-@import './pages/AboutPage';
-@import './pages/LinksPage';
-@import './pages/SplashPage';
-@import './pages/HomePage';
-@import './pages/BlogPage';
+@import "./pages/MediaPage";
+@import "./pages/PressPage";
+@import "./pages/AboutPage";
+@import "./pages/LinksPage";
+@import "./pages/SplashPage";
+@import "./pages/HomePage";
+@import "./pages/BlogPage";
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-		margin: 0;
-		padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-	background: $cl-black url('./images/art_bkgd.jpg') no-repeat 0px 0px fixed;
-	background-size: cover;
-  @include fontRender($cl-white, 400, 'Open Sans', 15px, 20px, normal);
-	color: $cl-white;
+  background: $cl-black url("./images/art_bkgd.jpg") no-repeat 0px 0px fixed;
+  background-size: cover;
+  @include fontRender($cl-white, 400, "Open Sans", 15px, 20px, normal);
+  color: $cl-white;
 }
 
 p {
-	@include fontRender($cl-white, 400, 'Open Sans', 15px, 20px, normal);
-	margin-top: 0;
+  @include fontRender($cl-white, 400, "Open Sans", 15px, 20px, normal);
+  margin-top: 0;
 }
 
 blockquote {
-	margin-bottom: 25px;
-	p {
-		font-style: italic;
-		margin-bottom: 5px;
-	}
-	small {
-		display: block;
-		font-size: 11px;
-		text-align: right;
-	}
-	@media only screen and (max-width: $breakpoint-md) {
-			margin-left: 20px;
-			margin-right: 20px;
-	}
-	@media only screen and (max-width: $breakpoint-sm) {
-		p {
-			font-size: 13px;
-		}
-	}
+  margin-bottom: 25px;
+  p {
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+  small {
+    display: block;
+    font-size: 11px;
+    text-align: right;
+  }
+  @media only screen and (max-width: $breakpoint-md) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  @media only screen and (max-width: $breakpoint-sm) {
+    p {
+      font-size: 13px;
+    }
+  }
 }
 
 a {
-    color: $cl-half-baked;
-    text-decoration:none;
-	&:hover {
-		text-decoration:underline;
-	}
+  color: $cl-half-baked;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 h2 {
-    color: $cl-ghost;
-    font: normal 26pt "Times New Roman", Times, serif;
-    text-transform: uppercase;
-    margin: 0 0 10px 0;
-    padding-bottom: 0px;
+  color: $cl-ghost;
+  font: normal 26pt "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  padding-bottom: 0px;
 }
 
 h3 {
-  @include fontRender($cl-heathered-gray, 700, 'Amiri', 17px, 20px, 0.025rem);
-	margin-bottom: 10px;
-	margin-top: 0;
-	text-transform: uppercase;
+  @include fontRender($cl-heathered-gray, 700, "Amiri", 17px, 20px, 0.025rem);
+  margin-bottom: 10px;
+  margin-top: 0;
+  text-transform: uppercase;
 }
 
 .copyright {
-	@include fontRender($cl-gray, 700, $serif-font-stack, 10px, 13px, normal);
-	display: block;
-	padding: 0 10px;
-	text-align: center;
-	text-transform: uppercase;
-	p {
-		@include fontRender($cl-gray, 700, $serif-font-stack, 10px, 13px, normal);
-		margin: 0 0 6px 0;
-		a {
-			display: inline;
-		}
-	}
-	a {
-		@include fontRender($cl-gray, 700, $serif-font-stack, 10px, 10px, normal);
-		display: block;
-		&:link, &:visited {
-			text-decoration: underline;
-		}
-		&:hover {
-			text-decoration: none;
-		}
-	}
-
+  @include fontRender($cl-gray, 700, $serif-font-stack, 10px, 13px, normal);
+  display: block;
+  padding: 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  p {
+    @include fontRender($cl-gray, 700, $serif-font-stack, 10px, 13px, normal);
+    margin: 0 0 6px 0;
+    a {
+      display: inline;
+    }
+  }
+  a {
+    @include fontRender($cl-gray, 700, $serif-font-stack, 10px, 10px, normal);
+    display: block;
+    &:link,
+    &:visited {
+      text-decoration: underline;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
-input[type="text"], textarea {
-    background-color: $cl-nepal;
-    border: 1px solid $cl-tropical-blue;
-    font: normal 13pt "Times New Roman", Times, serif;
+input[type="text"],
+textarea {
+  background-color: $cl-nepal;
+  border: 1px solid $cl-tropical-blue;
+  font: normal 13pt "Times New Roman", Times, serif;
 }
 
 button {
-	@include fontRender($cl-black, 700, 'Amiri', 15px, 20px, normal);
-	background-color: $cl-domino;
-	border: 0;
-	cursor: pointer;
-	display: inline-block;
-	filter: sepia(1);
-	margin: 0 5px 10px 0px;
-	padding: 5px 10px 3px 10px;
-	text-transform: uppercase;
-	&:disabled {
-		background-color: $cl-taupe;
-		cursor: text;
-	}
+  @include fontRender($cl-black, 700, "Amiri", 15px, 20px, normal);
+  background-color: $cl-domino;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  filter: sepia(1);
+  margin: 0 5px 10px 0px;
+  padding: 5px 10px 3px 10px;
+  text-transform: uppercase;
+  &:disabled {
+    background-color: $cl-taupe;
+    cursor: text;
+  }
 }
 
 .hideMe {
-	display: none;
+  display: none;
 }
 .showMe {
-	display: inline;
+  display: inline;
 }
+//
